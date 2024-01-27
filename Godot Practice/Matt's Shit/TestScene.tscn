@@ -27,7 +27,6 @@ show_collision = true
 format = 1
 
 [node name="Character" type="Area2D" parent="."]
-scale = Vector2( 0.995662, 0.998113 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 shape = SubResource( 2 )
