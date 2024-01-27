@@ -3,6 +3,8 @@ using System;
 
 public partial class BasicInteractive : Area2D, IInteractive
 {
+    public event Action OnInteracted;
+
     public override void _Ready()
     {
         base._Ready();
@@ -14,6 +16,7 @@ public partial class BasicInteractive : Area2D, IInteractive
     public void Interact(Node reference = null)
     {
         GD.Print("I was clicked!");
+        OnInteracted?.Invoke();
     }
 
     private void OnMouseEntered()
