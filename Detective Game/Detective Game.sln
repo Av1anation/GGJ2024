@@ -1,6 +1,7 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Detective Game", "Detective Game.csproj", "{E8A171C4-F7CF-460F-96A5-6001F25A99C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Detective Game", "Detective Game.csproj", "{1D8213DC-859F-497C-80F7-93BA23D8815C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,5 +16,11 @@ Global
 		{E8A171C4-F7CF-460F-96A5-6001F25A99C8}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{E8A171C4-F7CF-460F-96A5-6001F25A99C8}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{E8A171C4-F7CF-460F-96A5-6001F25A99C8}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{1D8213DC-859F-497C-80F7-93BA23D8815C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal
