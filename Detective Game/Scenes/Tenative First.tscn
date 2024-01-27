@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cenbr1nyye1dr"]
 
-[ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="1_lwpig"]
-[ext_resource type="Texture2D" uid="uid://xmjnsc1dspbm" path="res://Art/Tilemaps/Temp/block_E.png" id="2_6y5ip"]
+[ext_resource type="Texture2D" uid="uid://xmjnsc1dspbm" path="res://Art/Tilemaps/Temp/block_E.png" id="1_wox6d"]
+[ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="2_y6i8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kupxm"]
-texture = ExtResource("2_6y5ip")
+texture = ExtResource("1_wox6d")
 texture_region_size = Vector2i(256, 512)
 6:14/0 = 0
 7:14/0 = 0
@@ -271,4 +271,4 @@ layer_1/name = "Floors"
 layer_1/y_sort_enabled = true
 layer_1/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 65536, 0, 0, 131071, 0, 0, 65537, 0, 0, 1, 0, 0, -65536, 0, 0, -65535, 0, 0, -1, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0)
 
-[node name="Player" parent="Tilemap" instance=ExtResource("1_lwpig")]
+[node name="Player" parent="Tilemap" instance=ExtResource("2_y6i8w")]
