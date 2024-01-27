@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc8x0yx7w7sge"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu/Menu.cs" id="1_jk7r8"]
+[ext_resource type="Texture2D" uid="uid://df4h3owbawswb" path="res://Art/PLACEHOLDER.png" id="2_0jog1"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+script = ExtResource("1_jk7r8")
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_left = 120
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_0jog1")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 2
