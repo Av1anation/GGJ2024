@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://bkv4o4hges12j"]
+[gd_scene load_steps=5 format=3 uid="uid://bkv4o4hges12j"]
+
+[ext_resource type="Script" path="res://Scripts/Interactives/BasicInteractive.cs" id="1_ep8pk"]
+[ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="1_fej4j"]
+[ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="3_7q252"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
+size = Vector2(125, 125)
 
 [node name="Joseph\'sShit" type="Node2D"]
+
+[node name="TestInteractible" type="Area2D" parent="."]
+position = Vector2(371, 203)
+script = ExtResource("1_ep8pk")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestInteractible"]
+texture = ExtResource("1_fej4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestInteractible"]
+shape = SubResource("RectangleShape2D_uv2cn")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("3_7q252")
