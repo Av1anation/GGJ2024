@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class InteractionManager : Node
+public partial class InteractionManager : Node
 {
     public static InteractionManager Instance { get; private set; }
 
@@ -21,7 +21,7 @@ public class InteractionManager : Node
         if (!(@event is InputEventMouseButton mouseButton))
             return;
 
-        if (mouseButton.ButtonIndex == 1 && CurrentInteractive != null && mouseButton.Pressed)
+        if (mouseButton.ButtonIndex == MouseButton.Left && CurrentInteractive != null && mouseButton.Pressed)
             CurrentInteractive.Interact();
     }
 
