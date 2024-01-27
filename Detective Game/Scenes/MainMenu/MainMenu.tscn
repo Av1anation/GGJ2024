@@ -17,6 +17,8 @@ script = ExtResource("1_jk7r8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -27,13 +29,27 @@ texture = ExtResource("2_0jog1")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 300
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 300
+size_flags_vertical = 8
+theme_override_constants/margin_left = 700
+theme_override_constants/margin_top = 175
+theme_override_constants/margin_right = 700
+theme_override_constants/margin_bottom = 110
 
-[node name="Button" type="Button" parent="VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
-text = "Play
+size_flags_vertical = 8
+theme_override_constants/separation = 50
+
+[node name="Play" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+Play
+
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit
 "
 
 [node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
@@ -42,4 +58,5 @@ layout_mode = 2
 text = "Play"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="OnQuitPressed"]

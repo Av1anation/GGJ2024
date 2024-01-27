@@ -19,4 +19,9 @@ public partial class Menu : MarginContainer
 		GetTree().ChangeSceneToFile("res://Scenes/Tenative First.tscn");
 
     }
+
+	private void OnQuitPressed()
+	{
+		GetTree().Quit();
+	}
 }
