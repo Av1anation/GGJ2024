@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjaj24pptnq6"]
+[gd_scene load_steps=9 format=3 uid="uid://cjaj24pptnq6"]
 
-[ext_resource type="Texture2D" uid="uid://df4h3owbawswb" path="res://Art/PLACEHOLDER.png" id="1_ew167"]
 [ext_resource type="Script" path="res://Prefabs/PlayerMovement.cs" id="1_vo5wg"]
+[ext_resource type="Texture2D" uid="uid://cargh1qau62v1" path="res://Art/Player/IdleDL.png" id="2_3vwfd"]
+[ext_resource type="Texture2D" uid="uid://ctunypidw0nku" path="res://Art/Player/IdleUL.png" id="3_67f8d"]
+[ext_resource type="Texture2D" uid="uid://cxb0gvwuf1cbf" path="res://Art/Player/IdleDR.png" id="4_syy6n"]
+[ext_resource type="Texture2D" uid="uid://c7uqabcuf1q8h" path="res://Art/Player/IdleUR.png" id="5_uhgnt"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t5li1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d068k"]
+size = Vector2(46, 76.1002)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76kl6"]
 
@@ -11,10 +15,44 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ew167")
+"texture": ExtResource("2_3vwfd")
 }],
 "loop": true,
-"name": &"Temp",
+"name": &"Idle LD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_67f8d")
+}],
+"loop": true,
+"name": &"Idle LU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_syy6n")
+}],
+"loop": true,
+"name": &"Idle RD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uhgnt")
+}],
+"loop": true,
+"name": &"Idle RU",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walk LD",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walk RD",
 "speed": 5.0
 }]
 
@@ -24,11 +62,14 @@ y_sort_enabled = true
 
 [node name="Locomotion" type="CharacterBody2D" parent="."]
 scale = Vector2(1, 0.985543)
+motion_mode = 1
 script = ExtResource("1_vo5wg")
-Speed = 1500.0
+Speed = 1000.0
 
 [node name="Physics Collider" type="CollisionShape2D" parent="Locomotion"]
-shape = SubResource("CapsuleShape2D_t5li1")
+z_index = 2
+position = Vector2(0, 40.0794)
+shape = SubResource("RectangleShape2D_d068k")
 
 [node name="Trigger Detection" type="Area2D" parent="Locomotion"]
 scale = Vector2(1, 1.01467)
@@ -39,7 +80,7 @@ shape = SubResource("RectangleShape2D_76kl6")
 [node name="Sprite" type="AnimatedSprite2D" parent="Locomotion"]
 scale = Vector2(0.5, 0.507334)
 sprite_frames = SubResource("SpriteFrames_473pj")
-animation = &"Temp"
+animation = &"Idle RU"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_limits = true
