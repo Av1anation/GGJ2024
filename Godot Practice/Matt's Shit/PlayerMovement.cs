@@ -23,14 +23,14 @@ public class PlayerMovement : RigidBody2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _PhysicsProcess(float delta)
     {
-        if (Input.IsActionPressed("Move_Right"))
+        if (Input.IsActionPressed("move_Right"))
             PlayerVelocity.x += 1;
-        if (Input.IsActionPressed("Move_Left"))
+        if (Input.IsActionPressed("move_Left"))
             PlayerVelocity.x -= 1;
-        if (Input.IsActionPressed("Move_Up"))
-            PlayerVelocity.y -= 1; // Assuming up is negative on the y-axis
-        if (Input.IsActionPressed("Move_Down"))
-            PlayerVelocity.y += 1;
+        if (Input.IsActionPressed("move_Up"))
+            PlayerVelocity.y -= .5f; // Assuming up is negative on the y-axis
+        if (Input.IsActionPressed("move_Down"))
+            PlayerVelocity.y += .5f;
 
         PlayerVelocity = PlayerVelocity.Normalized() * Speed * delta; // Apply delta to make movement frame rate independent
         LinearVelocity = PlayerVelocity;
