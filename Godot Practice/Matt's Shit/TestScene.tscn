@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Matt's Shit/PlayerMovement.cs" type="Script" id=2]
 
 [sub_resource type="TileSet" id=4]
 
@@ -37,6 +38,7 @@ frames = SubResource( 1 )
 physics_material_override = SubResource( 3 )
 gravity_scale = 0.0
 can_sleep = false
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/RigidBody2D"]
 shape = SubResource( 2 )
