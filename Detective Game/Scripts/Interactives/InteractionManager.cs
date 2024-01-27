@@ -17,8 +17,8 @@ public partial class InteractionManager : Node
     {
         base._Input(@event);
 
-        // who the fuck made the C# version 7.3 so I can't use the 'not' keyword.
-        if (!(@event is InputEventMouseButton mouseButton))
+        // GD 4.2 MVP
+        if (@event is not InputEventMouseButton mouseButton)
             return;
 
         if (mouseButton.ButtonIndex == MouseButton.Left && CurrentInteractive != null && mouseButton.Pressed)
