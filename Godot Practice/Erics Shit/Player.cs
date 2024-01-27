@@ -16,6 +16,11 @@ public class Player : Area2D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+        Vector2 velocity = Vector2.Zero;
 
+        if(Input.IsActionPressed("move_Right"))
+        {
+            velocity.x += 1;
+        }
     }
 }
