@@ -12,4 +12,11 @@ public partial class Menu : MarginContainer
 	public override void _Process(double delta)
 	{
 	}
+
+	private void OnPlayPressed()
+	{
+
+		GetTree().ChangeSceneToFile("res://Scenes/Tenative First.tscn");
+
+    }
 }
