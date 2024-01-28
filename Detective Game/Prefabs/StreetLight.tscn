@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="1_7674h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlf7t"]
-size = Vector2(43, 89)
+size = Vector2(95, 80)
 
 [node name="StreetLightPlaceholder" type="Sprite2D"]
 z_index = 1
@@ -26,5 +26,5 @@ texture = ExtResource("1_7674h")
 position = Vector2(0, -158)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-12.5, 188.5)
+position = Vector2(-11.5, 233)
 shape = SubResource("RectangleShape2D_hlf7t")
