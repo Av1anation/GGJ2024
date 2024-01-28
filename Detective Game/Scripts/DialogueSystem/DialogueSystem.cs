@@ -75,7 +75,7 @@ public partial class DialogueSystem : Control
 
         foreach (Dialogue item in _possibleDialogues)
         {
-            if (item.DialogueConditions.Status)
+            if (item.IsValidConversation)
                 _validDialogues.Add(item);
         }
 

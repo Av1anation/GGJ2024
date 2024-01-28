@@ -17,6 +17,17 @@ public partial class Dialogue : Resource, IComparable<Dialogue>
     [Export]
     public Remember[] RememberOnCompletion;
 
+    public bool IsValidConversation
+    {
+        get
+        {
+            if (DialogueConditions != null)
+                return DialogueConditions.Status;
+
+            return true;
+        }
+    }
+
 
     int IComparable<Dialogue>.CompareTo(Dialogue other)
     {
