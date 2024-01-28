@@ -17,7 +17,7 @@ public partial class DialogueSystem : Control
     public RichTextLabel BodyText;
 
 
-    private Dialogue[] _possibleDialogues;
+    private List<Dialogue> _possibleDialogues;
     private List<Dialogue> _validDialogues;
     private Dialogue _currentDialogue;
     private int _dialogueIndex = 0;
@@ -46,7 +46,7 @@ public partial class DialogueSystem : Control
 
         GetValidDialogues();
 
-        if (_possibleDialogues.Length == 0)
+        if (_possibleDialogues.Count == 0)
             return;
 
         _currentDialogue = _validDialogues.First();
@@ -101,10 +101,13 @@ public partial class DialogueSystem : Control
         {
             item.DoRemember();
         }
+
+        if (!_currentDialogue.IsRepeatable)
+            _possibleDialogues.Remove(_currentDialogue);
     }
 
     public void SetPossibleDialogues(Dialogue[] dialogues)
     {
-        _possibleDialogues = dialogues;
+        _possibleDialogues = dialogues.ToList();
     }
 }

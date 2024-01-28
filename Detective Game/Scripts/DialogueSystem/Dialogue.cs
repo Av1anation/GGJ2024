@@ -9,6 +9,9 @@ public partial class Dialogue : Resource, IComparable<Dialogue>
     public int Priority;
 
     [Export]
+    public bool IsRepeatable = true;
+
+    [Export]
     public ConditionalSet DialogueConditions;
 
     [Export]
