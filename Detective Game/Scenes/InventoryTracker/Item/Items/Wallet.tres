@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cso0nnfjbpjys"]
+
+[ext_resource type="Script" path="res://Scenes/InventoryTracker/Item/ItemData.cs" id="1_bdny8"]
+[ext_resource type="Texture2D" uid="uid://b3im0rda2sv8u" path="res://Art/Objects/wallet_evidence.png" id="1_kr02o"]
+
+[resource]
+script = ExtResource("1_bdny8")
+Name = "AlienWallet"
+Description = ""
+Stackable = false
+Sprite = ExtResource("1_kr02o")

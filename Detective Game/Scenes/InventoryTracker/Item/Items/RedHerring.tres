@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ctlxq5gwiluo5"]
+
+[ext_resource type="Script" path="res://Scenes/InventoryTracker/Item/ItemData.cs" id="1_0w1ms"]
+[ext_resource type="Texture2D" uid="uid://du2wxd0w6drvx" path="res://Art/Objects/Balloon evidence.png" id="1_o8in2"]
+
+[resource]
+script = ExtResource("1_0w1ms")
+Name = "HerringBalloon"
+Description = "Theres something fishy about this"
+Stackable = false
+Sprite = ExtResource("1_o8in2")

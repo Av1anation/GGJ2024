@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxlluokff7kae"]
+
+[ext_resource type="PackedScene" uid="uid://cedpkn4rqrk44" path="res://Scenes/Interactibles/ItemInteractible.tscn" id="1_stvoi"]
+[ext_resource type="Resource" uid="uid://dqwl243qfqnyu" path="res://Scenes/InventoryTracker/Item/Items/DirtEvidence.tres" id="2_fbnm8"]
+[ext_resource type="Texture2D" uid="uid://bgdk6tissukj2" path="res://Art/Objects/scorched_earth_evidence.png" id="3_lw0qf"]
+
+[node name="ItemInteractible" instance=ExtResource("1_stvoi")]
+Item = ExtResource("2_fbnm8")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_lw0qf")
