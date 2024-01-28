@@ -8,6 +8,9 @@ public partial class DialogueInteractive : BasicInteractive
     [Export]
     public Dialogue[] PossibleDialogues;
 
+    [Signal]
+    public delegate void OnDialogueFinishedEventHandler();
+
     public List<Dialogue> PossibleDialoguesList;
 
 
@@ -39,6 +42,11 @@ public partial class DialogueInteractive : BasicInteractive
             DialogueSystem.Instance.SetPossibleDialogues(PossibleDialoguesList, this);
 
         DialogueSystem.Instance.OpenDialogue();
+    }
+
+    public void DialogueFinished()
+    {
+        EmitSignal(SignalName.OnDialogueFinished);
     }
 
 }

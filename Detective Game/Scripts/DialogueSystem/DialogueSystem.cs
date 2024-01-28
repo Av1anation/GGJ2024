@@ -104,10 +104,12 @@ public partial class DialogueSystem : Control
         GetTree().Paused = false;
         IsActive = false;
 
-        foreach (Remember item in _currentDialogue.RememberOnCompletion)
+        foreach (VariableChange item in _currentDialogue.RememberOnCompletion)
         {
-            item.DoRemember();
+            item.ChangeVar();
         }
+
+        _currentInteractive.DialogueFinished();
 
         if (!_currentDialogue.IsRepeatable)
             _currentInteractive.PossibleDialoguesList.Remove(_currentDialogue);

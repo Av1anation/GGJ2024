@@ -18,7 +18,7 @@ public partial class Dialogue : Resource, IComparable<Dialogue>
     public Line[] LinesInDialogue;
 
     [Export]
-    public Remember[] RememberOnCompletion;
+    public VariableChange[] RememberOnCompletion;
 
     public bool IsValidConversation
     {
