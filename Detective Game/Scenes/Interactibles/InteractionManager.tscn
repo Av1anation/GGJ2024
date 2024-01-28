@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dksjplg8x5jdc"]
+[gd_scene load_steps=2 format=3 uid="uid://0ec0ysbsefpe"]
 
 [ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="1_sh2js"]
 
 [node name="InteractionManager" type="Node"]
+process_mode = 3
 script = ExtResource("1_sh2js")

@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7hu5ce1rkjc0"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="1_nvsfo"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="2_al7oe"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="3_8ho4f"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="4_3rnie"]
+[ext_resource type="Texture2D" uid="uid://bkb37ai3u30yy" path="res://Art/NPC/crowd1.png" id="5_1sc2t"]
+
+[sub_resource type="Resource" id="Resource_6w2yg"]
+script = ExtResource("2_al7oe")
+Name = "Crowd"
+
+[sub_resource type="Resource" id="Resource_bpxgg"]
+script = ExtResource("3_8ho4f")
+Text = "Holy Fucking Shit!!!!!"
+SpeakingCharacter = SubResource("Resource_6w2yg")
+
+[sub_resource type="Resource" id="Resource_ubc5w"]
+script = ExtResource("4_3rnie")
+Priority = 0
+IsRepeatable = true
+LinesInDialogue = Array[Object]([SubResource("Resource_bpxgg")])
+RememberOnCompletion = null
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh44h"]
+size = Vector2(275, 200)
+
+[node name="NPC Crowd" type="Area2D"]
+position = Vector2(-413, 1028)
+script = ExtResource("1_nvsfo")
+PossibleDialogues = Array[Object]([SubResource("Resource_ubc5w")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hh44h")
+
+[node name="Crowd1" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(6, -8)
+scale = Vector2(0.611004, 0.611004)
+texture = ExtResource("5_1sc2t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Crowd1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crowd1/StaticBody2D"]
+position = Vector2(-4.90995, 72.0127)
+polygon = PackedVector2Array(-248.771, -73.6492, -103.848, 19.2312, 5.76933, 11.5387, 100.002, 78.8477, 189.851, 83.4692, 247.134, 32.733, 260.227, -60.556, 209.491, -106.382, 78.8476, -173.08, -92.3094, -184.619, -196.398, -176.758)
+metadata/_edit_lock_ = true
+
+[node name="CrowdShadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.592157)
+y_sort_enabled = true
+position = Vector2(51, 8)
+scale = Vector2(0.7, 0.53)
+skew = 0.445059
+texture = ExtResource("5_1sc2t")
