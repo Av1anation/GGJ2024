@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bqn6k8xhb0jba"]
+
+[ext_resource type="Texture2D" uid="uid://dllhdp57tdfwg" path="res://Art/Dialogue/UI/PhoneIcon.png" id="1_d4pgr"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="1_u64yc"]
+
+[resource]
+script = ExtResource("1_u64yc")
+Name = "Dispatch"
+Faceplate = ExtResource("1_d4pgr")
