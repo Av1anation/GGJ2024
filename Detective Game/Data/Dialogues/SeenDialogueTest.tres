@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=13 format=3 uid="uid://eob8gjuv04hh"]
+
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="1_7brqv"]
+[ext_resource type="Resource" uid="uid://vmb56vqrqw8y" path="res://Data/Vairables/Testing/HasSeenDialogue.tres" id="1_kpwj5"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_uprwu"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="2_o3pk5"]
+[ext_resource type="Resource" uid="uid://b5pmhw18wk12p" path="res://Data/Characters/ChalkPerson.tres" id="4_ofcmw"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="5_ot7jb"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="6_gsww0"]
+
+[sub_resource type="Resource" id="Resource_646ny"]
+script = ExtResource("1_7brqv")
+Variable = ExtResource("1_kpwj5")
+Operator = 0
+Comparator = 1
+
+[sub_resource type="Resource" id="Resource_1o8ld"]
+script = ExtResource("2_o3pk5")
+Conditions = Array[Object]([SubResource("Resource_646ny")])
+
+[sub_resource type="Resource" id="Resource_ih153"]
+script = ExtResource("5_ot7jb")
+Text = "You look familiar."
+SpeakingCharacter = ExtResource("4_ofcmw")
+
+[sub_resource type="Resource" id="Resource_xqi0p"]
+script = ExtResource("5_ot7jb")
+Text = "I've never seen you before in my life."
+SpeakingCharacter = ExtResource("6_gsww0")
+
+[sub_resource type="Resource" id="Resource_26abo"]
+script = ExtResource("5_ot7jb")
+Text = "Oh, you're right."
+SpeakingCharacter = ExtResource("4_ofcmw")
+
+[resource]
+script = ExtResource("1_uprwu")
+Priority = 1
+DialogueConditions = SubResource("Resource_1o8ld")
+LinesInDialogue = Array[Object]([SubResource("Resource_ih153"), SubResource("Resource_xqi0p"), SubResource("Resource_26abo")])
+RememberOnCompletion = Array[Object]([])
