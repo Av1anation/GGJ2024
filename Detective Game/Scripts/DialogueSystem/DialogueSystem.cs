@@ -72,7 +72,6 @@ public partial class DialogueSystem : Control
 
     private void GetValidDialogues()
     {
-        GD.Print($"All dialogues:\n\t{string.Join("\n\t", _possibleDialogues.Select(x => x.LinesInDialogue.First().Text))}");
         _validDialogues = new();
 
         foreach (Dialogue item in _possibleDialogues)
@@ -82,7 +81,6 @@ public partial class DialogueSystem : Control
         }
 
         _validDialogues.Sort();
-        GD.Print($"Valid dialogues:\n\t{string.Join("\n\t", _validDialogues.Select(x => x.LinesInDialogue[0].Text))}");
     }
 
     private void ShowNextLine()
