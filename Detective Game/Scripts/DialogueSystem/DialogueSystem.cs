@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Linq;
 
-public partial class DialogueSystem : Node
+public partial class DialogueSystem : Control
 {
     [Export]
     public TextureRect Icon;
@@ -23,15 +23,25 @@ public partial class DialogueSystem : Node
 
     public override void _Ready()
     {
-        ClickToContinue.OnInteract += ShowNextLine;
-        DisplayDialogue();
+        ClickToContinue.OnInteract += OpenDialogue;
     }
 
-    public void DisplayDialogue()
+    public override void _Input(InputEvent @event)
     {
-        Icon.Texture = TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Faceplate;
-        NameplateText.Text = "[center][b]" + TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Name;
-        BodyText.Text = TestDialogue.LinesInDialogue[_dialogueIndex].Text;
+        base._Input(@event);
+
+        if (@event is not InputEventKey key)
+            return;
+
+        if (key.Keycode == Key.E && key.IsPressed())
+            ShowNextLine();
+    }
+
+    public void OpenDialogue()
+    {
+        ResetDialogue();
+        Visible = true;
+        DisplayDialogue();
     }
 
     private void ResetDialogue()
@@ -39,9 +49,21 @@ public partial class DialogueSystem : Node
         _dialogueIndex = 0;
     }
 
+    private void DisplayDialogue()
+    {
+        Icon.Texture = TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Faceplate;
+        NameplateText.Text = "[center][b]" + TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Name;
+        BodyText.Text = TestDialogue.LinesInDialogue[_dialogueIndex].Text;
+    }
+
     private void ShowNextLine()
     {
-        _dialogueIndex = Mathf.Clamp(_dialogueIndex + 1, 0, TestDialogue.LinesInDialogue.Length);
+        if (++_dialogueIndex == TestDialogue.LinesInDialogue.Length)
+        {
+            Visible = false;
+            return;
+        }
+
         DisplayDialogue();
     }
 }
