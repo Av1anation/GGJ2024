@@ -15,18 +15,18 @@
 [ext_resource type="Texture2D" uid="uid://brl7pqlor6ljf" path="res://Art/Objects/ferris_wheel.png" id="13_crreq"]
 [ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="14_sfq6b"]
 [ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="15_wlh2t"]
-[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="16_vpncf"]
+[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/Trash/TestDialogue.tres" id="16_vpncf"]
 [ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="17_8kh0n"]
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
 [ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
-[ext_resource type="PackedScene" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
-[ext_resource type="PackedScene" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
+[ext_resource type="PackedScene" uid="uid://bjls84wuemjen" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
+[ext_resource type="PackedScene" uid="uid://c7hu5ce1rkjc0" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
 [ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
 [ext_resource type="PackedScene" uid="uid://bneudlx7hmgjk" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
-[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
 [ext_resource type="Texture2D" uid="uid://cfc6tcnwu1kr4" path="res://Art/Objects/tree.png" id="28_7b3qg"]
 [ext_resource type="Texture2D" uid="uid://cnsokjrtvs56x" path="res://Art/Objects/roller_coaster.png" id="28_hoect"]
 [ext_resource type="AudioStream" uid="uid://dpx2qn2kyg1sl" path="res://Audio/Music/old-macdonald-had-a-farm-background-short-music-for-video-30-second-188183.mp3" id="29_wm8p1"]
@@ -240,6 +240,9 @@ scale = Vector2(0.72, 0.72)
 
 [node name="CollisionShape2D" parent="Layer 1/Baby Floats" index="2"]
 position = Vector2(5.55469, -44.4445)
+
+[node name="CollisionShape2D" parent="Layer 1/Baby Floats/StaticBody2D" index="0"]
+position = Vector2(-3.90625, 63.2813)
 scale = Vector2(1, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Layer 1/Baby Floats"]

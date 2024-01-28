@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://durf3etu5yp0a"]
+[gd_scene load_steps=10 format=3 uid="uid://durf3etu5yp0a"]
 
 [ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="1_4xtde"]
+[ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_5dg7j"]
 [ext_resource type="Resource" uid="uid://desukmiaxdnu3" path="res://Data/Dialogues/Charlie/Charlie_Wait.tres" id="2_w6ex7"]
 [ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="3_1b1le"]
 [ext_resource type="PackedScene" uid="uid://6auwbtvdp1e0" path="res://Scenes/InventoryTracker/InventoryGrid.tscn" id="4_733h6"]
@@ -17,6 +18,8 @@ gradient = SubResource("Gradient_6r56n")
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Intro Cutscene" type="Node2D"]
+script = ExtResource("1_5dg7j")
+ScenePath = "res://Scenes/Tenative First BACKUP2.tscn"
 
 [node name="TestDialogueActor" parent="." instance=ExtResource("1_4xtde")]
 position = Vector2(-277978, 82468.8)
@@ -48,3 +51,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_g11yn")
 [node name="DialogueUi" parent="Background/Hud" instance=ExtResource("5_i1dy5")]
 
 [connection signal="ready" from="." to="TestDialogueActor" method="IntroCutscene"]
+[connection signal="OnDialogueFinished" from="TestDialogueActor" to="." method="LoadScene"]
