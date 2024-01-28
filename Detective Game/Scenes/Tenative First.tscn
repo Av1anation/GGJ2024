@@ -175,6 +175,12 @@ offset = Vector2(-500, -1000)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer 1/FerrisWheel/StaticBody2D"]
 polygon = PackedVector2Array(232, -174, -490, 185, -229, 368, 514, 5)
 
+[node name="Shadow" type="Sprite2D" parent="Layer 1/FerrisWheel"]
+modulate = Color(0, 0, 0, 0.301961)
+position = Vector2(536, -120)
+skew = 0.959931
+texture = ExtResource("4_g24l0")
+
 [node name="Player" parent="Layer 1" instance=ExtResource("1_lwpig")]
 z_index = 1
 y_sort_enabled = true
@@ -214,3 +220,4 @@ offset_left = -462.5
 offset_right = 462.5
 offset_bottom = 196.0
 grow_horizontal = 2
+scale = Vector2(0.604754, 0.00582654)
