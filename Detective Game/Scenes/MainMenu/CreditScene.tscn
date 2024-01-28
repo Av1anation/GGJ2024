@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://cyi5udmfioajj"]
+[gd_scene load_steps=3 format=3 uid="uid://cyi5udmfioajj"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu/CreditScene.cs" id="1_iqut2"]
+[ext_resource type="Texture2D" uid="uid://bidw4alu7xdkh" path="res://Art/Menu/menu.png" id="2_3ie0t"]
 
 [node name="CreditScene" type="PanelContainer"]
 anchors_preset = 15
@@ -6,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iqut2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -33,3 +37,12 @@ https://www.zapsplat.com"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="TextureButton" parent="MarginContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("2_3ie0t")
+
+[connection signal="pressed" from="MarginContainer2/Button" to="." method="OnMenuPressed"]

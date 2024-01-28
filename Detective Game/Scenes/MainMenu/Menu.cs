@@ -27,6 +27,6 @@ public partial class Menu : MarginContainer
 
 	private void OnCreditsPressed()
 	{
-
-	}
+        GetTree().ChangeSceneToFile("res://Scenes/MainMenu/CreditScene.tscn");
+    }
 }
