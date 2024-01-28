@@ -1,5 +1,6 @@
-[gd_scene load_steps=49 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=50 format=3 uid="uid://bn0l65mspxcp"]
 
+[ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
 [ext_resource type="Script" path="res://Scenes/GameObjective.cs" id="1_xed2n"]
 [ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_p0icr"]
@@ -22,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
 [ext_resource type="PackedScene" uid="uid://bjls84wuemjen" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
-[ext_resource type="PackedScene" uid="uid://c7hu5ce1rkjc0" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
+[ext_resource type="PackedScene" uid="uid://dvjghexj5jrph" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
 [ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
@@ -166,7 +167,8 @@ size = Vector2(98, 89)
 size = Vector2(20, 51.157)
 
 [node name="TenativeFirst" type="Node2D"]
-script = ExtResource("1_xed2n")
+script = ExtResource("1_2yhtq")
+ScenePath = "res://Scenes/end_cutscene.tscn"
 
 [node name="Layer 0" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1631,8 +1633,14 @@ polygon = PackedVector2Array(4135, 3268, 6122, 2136, 7528, 3370, 5769, 4288)
 [node name="InteractionManager" parent="." instance=ExtResource("23_7niay")]
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_xed2n")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(5687, 2763, 4883, 3259, 4696, 3166, 5513, 2677)
+
+[node name="Nonono Dialogue" parent="." instance=ExtResource("15_wlh2t")]
+
+[connection signal="OnGameFinished" from="Area2D" to="." method="LoadScene"]
+[connection signal="OnGameUnfinished" from="Area2D" to="Nonono Dialogue" method="Interact"]
 
 [editable path="Layer 1/Baby Floats"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://bq02yx07hencq"]
+
+[ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_6xvll"]
+[ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="2_uq62s"]
+[ext_resource type="Resource" uid="uid://ba4e3bicio3xm" path="res://Data/Dialogues/World/Phone_Opening.tres" id="3_4epuq"]
+[ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="4_ulge5"]
+[ext_resource type="PackedScene" uid="uid://6auwbtvdp1e0" path="res://Scenes/InventoryTracker/InventoryGrid.tscn" id="5_nqivl"]
+[ext_resource type="PackedScene" uid="uid://dxi4sy8tidocf" path="res://Scenes/Dialogue/DialogueUI.tscn" id="6_3dfbf"]
+
+[sub_resource type="Gradient" id="Gradient_6r56n"]
+offsets = PackedFloat32Array(0, 0.632794, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hdavv"]
+gradient = SubResource("Gradient_6r56n")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g11yn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Intro Cutscene" type="Node2D"]
+script = ExtResource("1_6xvll")
+ScenePath = "res://Scenes/Tenative First BACKUP2.tscn"
+
+[node name="TestDialogueActor" parent="." instance=ExtResource("2_uq62s")]
+position = Vector2(-277978, 82468.8)
+rotation = 3.14159
+scale = Vector2(199.697, -174.722)
+PossibleDialogues = Array[Object]([ExtResource("3_4epuq")])
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(-199.697, 174.722)
+texture = SubResource("GradientTexture2D_hdavv")
+
+[node name="Hud" type="CanvasLayer" parent="Background"]
+
+[node name="InventoryHud" parent="Background/Hud" instance=ExtResource("4_ulge5")]
+visible = false
+offset_left = -417.0
+offset_right = 204.0
+scale = Vector2(0.68, 0.68)
+
+[node name="InventoryGrid" parent="Background/Hud" instance=ExtResource("5_nqivl")]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+offset_left = 69.0
+offset_top = 64.0
+offset_right = 133.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g11yn")
+
+[node name="DialogueUi" parent="Background/Hud" instance=ExtResource("6_3dfbf")]
+
+[connection signal="OnDialogueFinished" from="TestDialogueActor" to="." method="LoadScene"]
+[connection signal="ready" from="Background/Hud/DialogueUi" to="TestDialogueActor" method="IntroCutscene"]
