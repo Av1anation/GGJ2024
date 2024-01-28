@@ -12,7 +12,7 @@ size = Vector2(125, 125)
 [node name="Joseph\'sShit" type="Node2D"]
 
 [node name="TestInteractible" type="Area2D" parent="."]
-position = Vector2(876, 479)
+position = Vector2(873, 479)
 script = ExtResource("1_ep8pk")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestInteractible"]
@@ -24,7 +24,8 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText", "ClickToContinue")]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,6 +42,7 @@ Icon = NodePath("Panel/Icon")
 NameplateText = NodePath("Panel/Nameplate")
 BodyText = NodePath("Panel/BodyText")
 TestDialogue = ExtResource("5_lmcqr")
+ClickToContinue = NodePath("../TestInteractible")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_direction = 2
@@ -60,6 +62,18 @@ offset_top = 834.0
 offset_right = 1293.0
 offset_bottom = 1014.0
 
+[node name="Icon" type="TextureRect" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_vertical = 0
+texture = ExtResource("1_fej4j")
+expand_mode = 1
+
 [node name="BodyText" type="RichTextLabel" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = 2
@@ -74,17 +88,6 @@ theme_override_font_sizes/normal_font_size = 32
 text = "Hello World! This is a sample dialogue with a couple of lines of text."
 scroll_active = false
 
-[node name="Icon" type="TextureRect" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -180.0
-offset_right = 150.0
-offset_bottom = -30.0
-grow_vertical = 0
-texture = ExtResource("1_fej4j")
-
 [node name="Nameplate" type="RichTextLabel" parent="Control/Panel"]
 layout_mode = 1
 anchors_preset = 2
@@ -97,4 +100,19 @@ theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "[center][b]GoFuckYourself"
 
-[connection signal="OnInteracted" from="TestInteractible" to="Control" method="ShowNextLine"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]E"
+scroll_active = false
+autowrap_mode = 0
