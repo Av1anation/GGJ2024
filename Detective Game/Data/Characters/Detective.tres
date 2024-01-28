@@ -5,4 +5,5 @@
 
 [resource]
 script = ExtResource("2_bojfx")
+Name = "Detective"
 Faceplate = ExtResource("1_cojcw")

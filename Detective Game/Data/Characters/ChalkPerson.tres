@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b5pmhw18wk12p"]
+
+[ext_resource type="Texture2D" uid="uid://cdktm0ejxexpk" path="res://Art/ChalkPerson.png" id="1_tc8uh"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="2_8loo2"]
+
+[resource]
+script = ExtResource("2_8loo2")
+Name = "Chalky Charley"
+Faceplate = ExtResource("1_tc8uh")

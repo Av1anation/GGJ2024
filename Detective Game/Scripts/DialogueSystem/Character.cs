@@ -5,5 +5,8 @@ using System;
 public partial class Character : Resource
 {
     [Export]
-    public Texture Faceplate;
+    public string Name;
+
+    [Export]
+    public Texture2D Faceplate;
 }

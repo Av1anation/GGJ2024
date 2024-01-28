@@ -3,11 +3,16 @@ using System;
 
 public partial class BasicInteractive : Area2D, IInteractive
 {
-    public event Action OnInteracted;
+    public event Action OnInteract;
+
+    [Signal]
+    public delegate void OnInteractedEventHandler();
 
     public override void _Ready()
     {
         base._Ready();
+
+        GD.Print("Setting up mouse events");
 
         MouseEntered += OnMouseEntered;
         MouseExited += OnMouseExited;
@@ -16,7 +21,8 @@ public partial class BasicInteractive : Area2D, IInteractive
     public void Interact(Node reference = null)
     {
         GD.Print("I was clicked!");
-        OnInteracted?.Invoke();
+        OnInteract?.Invoke();
+        EmitSignal(SignalName.OnInteracted);
     }
 
     private void OnMouseEntered()

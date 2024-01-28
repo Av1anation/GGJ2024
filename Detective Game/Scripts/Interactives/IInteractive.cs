@@ -3,7 +3,7 @@ using System;
 
 public interface IInteractive
 {
-    public event Action OnInteracted;
+    public event Action OnInteract;
 
     void Interact(Node reference = null);
     void OnSelected();
