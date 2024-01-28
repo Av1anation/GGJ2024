@@ -205,7 +205,7 @@ texture = ExtResource("13_crreq")
 [node name="Player" parent="Layer 1" instance=ExtResource("14_sfq6b")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(-304, 1079)
+position = Vector2(4863, 2713)
 scale = Vector2(1, 1)
 Speed = 500.0
 
