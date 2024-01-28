@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="4_bc40h"]
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="5_lmcqr"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="5_qjrwr"]
-[ext_resource type="Resource" uid="uid://eob8gjuv04hh" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
+[ext_resource type="Resource" uid="uid://cjo0vwjx7sci1" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
 [ext_resource type="Texture2D" uid="uid://cdktm0ejxexpk" path="res://Art/ChalkPerson.png" id="7_im603"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
