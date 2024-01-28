@@ -1,34 +1,34 @@
-[gd_scene load_steps=40 format=3 uid="uid://qkn655o0qwrc"]
+[gd_scene load_steps=40 format=3 uid="uid://bn0l65mspxcp"]
 
-[ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_5w88f"]
-[ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_1bgxv"]
-[ext_resource type="Texture2D" uid="uid://b76ktjjxfqt6x" path="res://Art/Tilemaps/Main/path_corner_top.png" id="3_njf46"]
-[ext_resource type="Texture2D" uid="uid://m73o2axbkldd" path="res://Art/Tilemaps/Main/path.png" id="4_vdx2s"]
-[ext_resource type="Texture2D" uid="uid://cl2r3iykdh037" path="res://Art/Tilemaps/Main/path_corner.png" id="5_suikq"]
-[ext_resource type="Texture2D" uid="uid://cax25wdwoq7ki" path="res://Art/Tilemaps/Main/half_path.png" id="6_rjgte"]
-[ext_resource type="Texture2D" uid="uid://dfi8iijer3ack" path="res://Art/Tilemaps/Main/fence.png" id="7_vmudt"]
-[ext_resource type="Texture2D" uid="uid://rr6m6ewkpfpf" path="res://Art/Tilemaps/Main/fence2.png" id="8_c3kp8"]
-[ext_resource type="Texture2D" uid="uid://d21cyebsh56ei" path="res://Art/Tilemaps/Main/fence_back_corner.png" id="9_yqyeo"]
-[ext_resource type="Texture2D" uid="uid://by5a88ss6nf1q" path="res://Art/Tilemaps/Main/half_path_right.png" id="10_1rf4x"]
-[ext_resource type="Texture2D" uid="uid://d4h1ofyrxyyvb" path="res://Art/Tilemaps/Main/half_path_top_left.png" id="11_5bv8p"]
-[ext_resource type="Texture2D" uid="uid://b5rjprc4ntop2" path="res://Art/Tilemaps/Main/half_path_top_right.png" id="12_hws18"]
-[ext_resource type="Texture2D" uid="uid://brl7pqlor6ljf" path="res://Art/Objects/ferris_wheel.png" id="13_a8brn"]
-[ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="14_4fmga"]
-[ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="15_coylk"]
-[ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="16_3ejly"]
-[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="16_m3ltf"]
-[ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="17_1twxr"]
-[ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="18_4al23"]
-[ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="19_323qj"]
-[ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="19_rpjrm"]
-[ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="20_tg4qp"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_73g4d"]
-[ext_resource type="Texture2D" uid="uid://bkb37ai3u30yy" path="res://Art/NPC/crowd1.png" id="24_d0obd"]
+[ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
+[ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_p0icr"]
+[ext_resource type="Texture2D" uid="uid://b76ktjjxfqt6x" path="res://Art/Tilemaps/Main/path_corner_top.png" id="3_cvd3k"]
+[ext_resource type="Texture2D" uid="uid://m73o2axbkldd" path="res://Art/Tilemaps/Main/path.png" id="4_ltedj"]
+[ext_resource type="Texture2D" uid="uid://cl2r3iykdh037" path="res://Art/Tilemaps/Main/path_corner.png" id="5_thewt"]
+[ext_resource type="Texture2D" uid="uid://cax25wdwoq7ki" path="res://Art/Tilemaps/Main/half_path.png" id="6_uw7je"]
+[ext_resource type="Texture2D" uid="uid://dfi8iijer3ack" path="res://Art/Tilemaps/Main/fence.png" id="7_ovyg6"]
+[ext_resource type="Texture2D" uid="uid://rr6m6ewkpfpf" path="res://Art/Tilemaps/Main/fence2.png" id="8_a6b20"]
+[ext_resource type="Texture2D" uid="uid://d21cyebsh56ei" path="res://Art/Tilemaps/Main/fence_back_corner.png" id="9_me7g7"]
+[ext_resource type="Texture2D" uid="uid://by5a88ss6nf1q" path="res://Art/Tilemaps/Main/half_path_right.png" id="10_uf7xw"]
+[ext_resource type="Texture2D" uid="uid://d4h1ofyrxyyvb" path="res://Art/Tilemaps/Main/half_path_top_left.png" id="11_2cyt2"]
+[ext_resource type="Texture2D" uid="uid://b5rjprc4ntop2" path="res://Art/Tilemaps/Main/half_path_top_right.png" id="12_bcasc"]
+[ext_resource type="Texture2D" uid="uid://brl7pqlor6ljf" path="res://Art/Objects/ferris_wheel.png" id="13_crreq"]
+[ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="14_sfq6b"]
+[ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="15_wlh2t"]
+[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="16_vpncf"]
+[ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="17_8kh0n"]
+[ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
+[ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
+[ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
+[ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
+[ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="Texture2D" uid="uid://bkb37ai3u30yy" path="res://Art/NPC/crowd1.png" id="24_lft8h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhgpq"]
-texture = ExtResource("1_5w88f")
+texture = ExtResource("1_uyh2m")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -36,7 +36,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ayxys"]
-texture = ExtResource("2_1bgxv")
+texture = ExtResource("2_p0icr")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -64)
@@ -45,7 +45,7 @@ texture_region_size = Vector2i(256, 256)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, -128, 64, 0, 128, 128, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wsfnx"]
-texture = ExtResource("3_njf46")
+texture = ExtResource("3_cvd3k")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -53,7 +53,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ru4hc"]
-texture = ExtResource("4_vdx2s")
+texture = ExtResource("4_ltedj")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -61,7 +61,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxws5"]
-texture = ExtResource("5_suikq")
+texture = ExtResource("5_thewt")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -69,7 +69,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0goay"]
-texture = ExtResource("6_rjgte")
+texture = ExtResource("6_uw7je")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -77,7 +77,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0af8"]
-texture = ExtResource("7_vmudt")
+texture = ExtResource("7_ovyg6")
 texture_region_size = Vector2i(128, 300)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(64, 20)
@@ -86,7 +86,7 @@ texture_region_size = Vector2i(128, 300)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, 64, 0, 0, 0, -42.6667, -128, 21.3333)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_htxid"]
-texture = ExtResource("8_c3kp8")
+texture = ExtResource("8_a6b20")
 texture_region_size = Vector2i(128, 300)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(-64, 22)
@@ -95,7 +95,7 @@ texture_region_size = Vector2i(128, 300)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 128, 64, 128, 21.3333, 0, -42.6667)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w3np5"]
-texture = ExtResource("9_yqyeo")
+texture = ExtResource("9_me7g7")
 texture_region_size = Vector2i(256, 365)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 100)
@@ -107,7 +107,7 @@ texture_region_size = Vector2i(256, 365)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xjep"]
-texture = ExtResource("10_1rf4x")
+texture = ExtResource("10_uf7xw")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -115,7 +115,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4trqc"]
-texture = ExtResource("11_5bv8p")
+texture = ExtResource("11_2cyt2")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -123,7 +123,7 @@ texture_region_size = Vector2i(256, 148)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2nk1d"]
-texture = ExtResource("12_hws18")
+texture = ExtResource("12_bcasc")
 texture_region_size = Vector2i(256, 148)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -10)
@@ -176,7 +176,7 @@ layer_0/tile_data = PackedInt32Array(983039, 1, 0, 1048575, 1, 0, 983040, 1, 0, 
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-1201, 855)
-texture = ExtResource("13_a8brn")
+texture = ExtResource("13_crreq")
 centered = false
 offset = Vector2(-500, -1000)
 
@@ -189,9 +189,9 @@ polygon = PackedVector2Array(232, -174, -490, 185, -229, 368, 514, 5)
 modulate = Color(0, 0, 0, 0.301961)
 position = Vector2(536, -120)
 skew = 0.959931
-texture = ExtResource("13_a8brn")
+texture = ExtResource("13_crreq")
 
-[node name="Player" parent="Layer 1" instance=ExtResource("14_4fmga")]
+[node name="Player" parent="Layer 1" instance=ExtResource("14_sfq6b")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(5178, 2930)
@@ -211,46 +211,46 @@ drag_bottom_margin = 0.1
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="TestDialogueActor" parent="Layer 1" instance=ExtResource("15_coylk")]
+[node name="TestDialogueActor" parent="Layer 1" instance=ExtResource("15_wlh2t")]
 position = Vector2(-832, 1277)
-PossibleDialogues = Array[Object]([ExtResource("16_m3ltf")])
+PossibleDialogues = Array[Object]([ExtResource("16_vpncf")])
 
 [node name="PavedSquare" type="Sprite2D" parent="Layer 1"]
 position = Vector2(3855, 2216)
 scale = Vector2(3.91398, 3.76649)
-texture = ExtResource("16_3ejly")
+texture = ExtResource("17_8kh0n")
 metadata/_edit_lock_ = true
 
 [node name="PavedSquare2" type="Sprite2D" parent="Layer 1/PavedSquare"]
 position = Vector2(1141.29, 657.11)
 rotation = 3.14159
-texture = ExtResource("16_3ejly")
+texture = ExtResource("17_8kh0n")
 
 [node name="CropCircleEvidence" type="Sprite2D" parent="Layer 1"]
 position = Vector2(-855, 1070)
 scale = Vector2(0.75, 0.7)
-texture = ExtResource("17_1twxr")
+texture = ExtResource("18_kr3wu")
 
-[node name="StreetLightPlaceholder" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(3410, 2350)
 
-[node name="StreetLightPlaceholder10" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder10" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(1979, 2381)
 
-[node name="StreetLightPlaceholder11" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder11" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(3942, 1025)
 
-[node name="StreetLightPlaceholder12" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder12" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(2563, 576)
 
-[node name="StreetLightPlaceholder13" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder13" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(1089, 1584)
 
 [node name="StreetLightPlaceholder9" type="Sprite2D" parent="Layer 1"]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-496, 734)
-texture = ExtResource("19_rpjrm")
+texture = ExtResource("20_a8whw")
 offset = Vector2(0, -100)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer 1/StreetLightPlaceholder9"]
@@ -260,28 +260,28 @@ position = Vector2(0, -158)
 position = Vector2(-12.5, 188.5)
 shape = SubResource("RectangleShape2D_hlf7t")
 
-[node name="StreetLightPlaceholder14" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder14" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(-1407, 1283)
 
-[node name="StreetLightPlaceholder2" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder2" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(4050, 1925)
 
-[node name="StreetLightPlaceholder3" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder3" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(4286, 2782)
 
-[node name="StreetLightPlaceholder4" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder4" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(4926, 2357)
 
-[node name="StreetLightPlaceholder5" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder5" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(5206, 3240)
 
-[node name="StreetLightPlaceholder6" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder6" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(5846, 2815)
 
-[node name="StreetLightPlaceholder7" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder7" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(6219, 3774)
 
-[node name="StreetLightPlaceholder8" parent="Layer 1" instance=ExtResource("18_4al23")]
+[node name="StreetLightPlaceholder8" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(6859, 3349)
 
 [node name="Shadow" type="Sprite2D" parent="Layer 1"]
@@ -292,7 +292,7 @@ position = Vector2(2875.33, 1431.86)
 rotation = 0.165806
 scale = Vector2(0.602411, 0.810849)
 skew = 0.811578
-texture = ExtResource("19_323qj")
+texture = ExtResource("21_q6q7a")
 offset = Vector2(0, -300)
 
 [node name="Fountain" type="Sprite2D" parent="Layer 1"]
@@ -300,7 +300,7 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(2578.33, 1462.86)
 scale = Vector2(0.560282, 0.560282)
-texture = ExtResource("19_323qj")
+texture = ExtResource("21_q6q7a")
 offset = Vector2(0, -400)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Layer 1/Fountain"]
@@ -313,15 +313,15 @@ metadata/_edit_lock_ = true
 
 [node name="Node" type="Node" parent="Layer 1/Fountain/StaticBody2D/CollisionPolygon2D"]
 
-[node name="Hud" parent="." instance=ExtResource("20_tg4qp")]
+[node name="Hud" parent="." instance=ExtResource("22_bimjp")]
 
-[node name="InteractionManager" parent="." instance=ExtResource("23_73g4d")]
+[node name="InteractionManager" parent="." instance=ExtResource("23_7niay")]
 
 [node name="Crowd1" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-129, 965)
 scale = Vector2(0.51999, 0.51999)
-texture = ExtResource("24_d0obd")
+texture = ExtResource("24_lft8h")
 offset = Vector2(0, -78.015)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Crowd1"]

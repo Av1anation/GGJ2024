@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctml22mggu1c2"]
+[gd_scene load_steps=5 format=3 uid="uid://ctml22mggu1c2"]
 
 [ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="1_ds6n0"]
 [ext_resource type="PackedScene" uid="uid://6auwbtvdp1e0" path="res://Scenes/InventoryTracker/InventoryGrid.tscn" id="2_fx08u"]
+[ext_resource type="PackedScene" uid="uid://dxi4sy8tidocf" path="res://Scenes/Dialogue/DialogueUI.tscn" id="3_eajkg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g11yn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -17,3 +18,5 @@ offset_top = 64.0
 offset_right = 133.0
 offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g11yn")
+
+[node name="DialogueUi" parent="." instance=ExtResource("3_eajkg")]
