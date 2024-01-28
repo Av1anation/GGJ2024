@@ -5,7 +5,7 @@ using System;
 public partial class Character : Resource
 {
     [Export]
-    public string Name;
+    public string Name = "unnamed";
 
     [Export]
     public Texture2D Faceplate;

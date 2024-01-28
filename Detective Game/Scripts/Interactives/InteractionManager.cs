@@ -9,13 +9,13 @@ public partial class InteractionManager : Node
 
 	public override void _Ready()
 	{
-		GD.Print("Setting myself");
 		Instance = this;
 	}
 
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
+
 		// GD 4.2 MVP
 		if (@event is not InputEventMouseButton mouseButton)
 			return;
