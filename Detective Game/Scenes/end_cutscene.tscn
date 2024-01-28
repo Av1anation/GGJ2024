@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_6xvll"]
 [ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="2_uq62s"]
-[ext_resource type="Resource" uid="uid://ba4e3bicio3xm" path="res://Data/Dialogues/World/Phone_Opening.tres" id="3_4epuq"]
+[ext_resource type="Resource" uid="uid://1f2ru7i74in0" path="res://Data/Dialogues/AlienDon/Don_Confrontation.tres" id="3_ihfcp"]
 [ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="4_ulge5"]
 [ext_resource type="PackedScene" uid="uid://6auwbtvdp1e0" path="res://Scenes/InventoryTracker/InventoryGrid.tscn" id="5_nqivl"]
 [ext_resource type="PackedScene" uid="uid://dxi4sy8tidocf" path="res://Scenes/Dialogue/DialogueUI.tscn" id="6_3dfbf"]
@@ -25,7 +25,7 @@ ScenePath = "res://Scenes/Tenative First BACKUP2.tscn"
 position = Vector2(-277978, 82468.8)
 rotation = 3.14159
 scale = Vector2(199.697, -174.722)
-PossibleDialogues = Array[Object]([ExtResource("3_4epuq")])
+PossibleDialogues = Array[Object]([ExtResource("3_ihfcp")])
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(-199.697, 174.722)
