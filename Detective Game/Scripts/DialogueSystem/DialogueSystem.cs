@@ -25,9 +25,9 @@ public partial class DialogueSystem : Node
 
     public void DisplayDialogue()
     {
-        Icon.Texture = TestDialogue.LinesInDialogue.First().SpeakingCharacter.Faceplate;
-        NameplateText.Text = "[center][b]" + TestDialogue.LinesInDialogue.First().SpeakingCharacter.Name;
-        BodyText.Text = TestDialogue.LinesInDialogue.First().Text;
+        Icon.Texture = TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Faceplate;
+        NameplateText.Text = "[center][b]" + TestDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Name;
+        BodyText.Text = TestDialogue.LinesInDialogue[_dialogueIndex].Text;
     }
 
     private void ResetDialogue()
