@@ -28,7 +28,11 @@ public partial class DialogueInteractive : BasicInteractive
             return;
         }
 
-        DialogueSystem.Instance.SetPossibleDialogues(PossibleDialoguesList, this);
+        if (DialogueSystem.Instance.IsActive)
+            DialogueSystem.Instance.ShowNextLine();
+        else
+            DialogueSystem.Instance.SetPossibleDialogues(PossibleDialoguesList, this);
+
         DialogueSystem.Instance.OpenDialogue();
     }
 

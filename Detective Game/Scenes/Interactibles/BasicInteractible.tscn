@@ -7,6 +7,7 @@
 size = Vector2(125, 125)
 
 [node name="TestInteractible" type="Area2D"]
+process_mode = 3
 position = Vector2(421, 251)
 script = ExtResource("1_7di0m")
 
