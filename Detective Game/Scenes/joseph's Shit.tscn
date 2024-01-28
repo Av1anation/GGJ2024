@@ -35,6 +35,7 @@ offset_right = 1150.0
 offset_bottom = 650.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("4_bc40h")
 Icon = NodePath("Panel/Icon")
 NameplateText = NodePath("Panel/Nameplate")
