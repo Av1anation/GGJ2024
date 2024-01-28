@@ -227,6 +227,7 @@ PossibleDialogues = Array[Object]([ExtResource("16_vpncf")])
 
 [node name="NPC2" parent="Layer 1" instance=ExtResource("20_hh4lj")]
 position = Vector2(2985, 2096)
+PossibleDialogues = Array[Object]([null])
 
 [node name="NPC" parent="Layer 1" instance=ExtResource("21_tr7mm")]
 position = Vector2(1694, 1701)
@@ -238,7 +239,8 @@ position = Vector2(4129, 1390)
 scale = Vector2(0.72, 0.72)
 
 [node name="CollisionShape2D" parent="Layer 1/Baby Floats" index="2"]
-position = Vector2(31.9446, -45.8335)
+position = Vector2(5.55469, -44.4445)
+scale = Vector2(1, 1)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Layer 1/Baby Floats"]
 process_mode = 3

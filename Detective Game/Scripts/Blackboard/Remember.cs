@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 [GlobalClass]
-public partial class Remember : Resource
+public partial class VariableChange : Resource
 {
     [Export]
     public BlackboardVar Variable;
@@ -13,7 +13,7 @@ public partial class Remember : Resource
     [Export]
     public int Value;
 
-    public void DoRemember()
+    public void ChangeVar()
     {
         switch (Operator)
         {

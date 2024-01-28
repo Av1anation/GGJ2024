@@ -21,6 +21,11 @@ public partial class DialogueInteractive : BasicInteractive
         PossibleDialoguesList = PossibleDialogues.ToList();
     }
 
+    public void IntroCutscene()
+    {
+        Interact();
+    }
+
     public override void Interact(Node reference = null)
     {
         base.Interact(reference);
