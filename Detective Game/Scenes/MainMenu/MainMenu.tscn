@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bb8ldp65swloo" path="res://Art/Menu/TITLE_BG_TEMP.png" id="2_u3t5a"]
 [ext_resource type="Texture2D" uid="uid://ulbkqlv331di" path="res://Art/Menu/PLAY.png" id="3_22u0c"]
 [ext_resource type="Texture2D" uid="uid://b6b70xk5jiqfk" path="res://Art/Menu/QUIT.png" id="4_6yu2o"]
-[ext_resource type="AudioStream" uid="uid://dq1idm4my4qpb" path="res://Audio/catch-it-117676.mp3" id="5_hr8ov"]
+[ext_resource type="AudioStream" uid="uid://dq1idm4my4qpb" path="res://Audio/Music/catch-it-117676.mp3" id="5_hr8ov"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15

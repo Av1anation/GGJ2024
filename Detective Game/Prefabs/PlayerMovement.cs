@@ -12,6 +12,9 @@ public partial class PlayerMovement : CharacterBody2D
 
 	public AnimatedSprite2D Sprite;
 
+	private float StepTimer = 0f;
+	private float StepCooldown = 0.3f;
+
 	public override void _Ready()
 	{
 		Sprite = GetNode<AnimatedSprite2D>("Sprite");
@@ -20,6 +23,15 @@ public partial class PlayerMovement : CharacterBody2D
 	public override void _Process(double delta)
 	{
 		AnimateSprite();
+		StepTimer += ((float)delta);
+		if(InputVelocity > Vector2.Zero|| InputVelocity < Vector2.Zero)
+		{
+			if(StepTimer >= StepCooldown)
+			{
+                PlayFootstep();
+                StepTimer = 0f;
+            }
+		}
 	}
 
 	private void AnimateSprite()
@@ -89,5 +101,16 @@ public partial class PlayerMovement : CharacterBody2D
 		if(InputVelocity.Y != 0)
 			LastInputDir.Y = InputVelocity.Y;
 	
+	
+
+	}
+
+
+
+	public void PlayFootstep()
+	{
+		AudioStreamPlayer2D audio = GetNode<AudioStreamPlayer2D>("Steps");
+        audio.PitchScale = (GD.Randf() % .6f) + .8f;
+		audio.Play();
 	}
 }
