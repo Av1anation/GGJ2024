@@ -50,7 +50,7 @@ public partial class DialogueSystem : Control
         if (_possibleDialogues.Count == 0)
             return;
 
-        _currentDialogue = _validDialogues.First();
+        _currentDialogue = GetRandomDialogueOfPriority(_validDialogues.First().Priority);
         
         DisplayDialogue();
     }
@@ -111,5 +111,13 @@ public partial class DialogueSystem : Control
     {
         _possibleDialogues = dialogues;
         _currentInteractive = callbackObj;
+    }
+
+    private Dialogue GetRandomDialogueOfPriority(int priority)
+    {
+        List<Dialogue> dialogues = _possibleDialogues.Where(x => x.Priority == priority).ToList();
+        int rand = (int)GD.Randi() % dialogues.Count;
+
+        return dialogues[rand];
     }
 }
