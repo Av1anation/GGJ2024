@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxi4sy8tidocf"]
+[gd_scene load_steps=5 format=3 uid="uid://dxi4sy8tidocf"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="1_guw6u"]
-[ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="2_d4gqa"]
+[ext_resource type="Texture2D" uid="uid://ernm736h41en" path="res://Art/Dialogue/Folder.png" id="2_ej0iu"]
+[ext_resource type="Texture2D" uid="uid://dllhdp57tdfwg" path="res://Art/Dialogue/PhoneIcon.png" id="3_bx4qu"]
+[ext_resource type="Texture2D" uid="uid://bomd64hpvnj52" path="res://Art/Dialogue/DIALOGUE_MARKER.png" id="3_n2mul"]
 
 [node name="DialogueUi" type="Control" node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
 layout_mode = 3
@@ -28,21 +30,41 @@ grow_vertical = 0
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 593.0
-offset_top = 834.0
-offset_right = 1293.0
-offset_bottom = 1014.0
+offset_left = 439.0
+offset_top = 802.0
+offset_right = 1139.0
+offset_bottom = 982.0
+scale = Vector2(1.5, 1.5)
+
+[node name="FolderBackground" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = -131.0
+offset_top = -359.0
+offset_right = 829.0
+offset_bottom = 181.0
+texture = ExtResource("2_ej0iu")
+expand_mode = 1
+
+[node name="Marker" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = -142.667
+offset_top = -311.333
+offset_right = 817.333
+offset_bottom = 168.667
+texture = ExtResource("3_n2mul")
+expand_mode = 1
 
 [node name="Icon" type="TextureRect" parent="Panel"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -180.0
-offset_right = 150.0
-offset_bottom = -30.0
+offset_left = -130.667
+offset_top = -475.333
+offset_right = 829.333
+offset_bottom = 4.66666
 grow_vertical = 0
-texture = ExtResource("2_d4gqa")
+texture = ExtResource("3_bx4qu")
 expand_mode = 1
 
 [node name="BodyText" type="RichTextLabel" parent="Panel"]
@@ -50,12 +72,13 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 175.0
-offset_top = -180.0
-offset_right = 675.0
-offset_bottom = -30.0
+offset_left = 181.0
+offset_top = -88.0
+offset_right = 681.0
+offset_bottom = 62.0
 grow_vertical = 0
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
 text = "AtigMDEYpZVFApUVAPNqciSDkTYzgLZyyzbgQEbgMjwLXuwadAcxckUCTmE."
 scroll_active = false
 
@@ -64,12 +87,17 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 150.0
+offset_left = 170.667
+offset_top = -137.333
+offset_right = 320.667
+offset_bottom = -97.3333
 grow_vertical = 0
+scale = Vector2(1.4, 1.4)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "[center][b]GoFuckYourself"
+scroll_active = false
 
 [node name="E to continue" type="RichTextLabel" parent="Panel"]
 layout_mode = 1
