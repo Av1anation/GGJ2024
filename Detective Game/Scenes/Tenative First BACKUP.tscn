@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://qkn655o0qwrc"]
+[gd_scene load_steps=40 format=3 uid="uid://ddrc8xudlxago"]
 
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_5w88f"]
 [ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_1bgxv"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="19_323qj"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="19_rpjrm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="20_tg4qp"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_73g4d"]
+[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_73g4d"]
 [ext_resource type="Texture2D" uid="uid://bkb37ai3u30yy" path="res://Art/NPC/crowd1.png" id="24_d0obd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
