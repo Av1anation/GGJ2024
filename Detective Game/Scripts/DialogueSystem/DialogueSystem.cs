@@ -109,6 +109,8 @@ public partial class DialogueSystem : Control
             item.DoRemember();
         }
 
+        _currentInteractive.DialogueFinished();
+
         if (!_currentDialogue.IsRepeatable)
             _currentInteractive.PossibleDialoguesList.Remove(_currentDialogue);
     }

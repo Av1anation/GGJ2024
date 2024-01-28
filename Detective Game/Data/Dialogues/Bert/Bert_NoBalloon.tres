@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=14 format=3 uid="uid://dhablkpb6220o"]
+
+[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="1_ogfhj"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_snir1"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_erejb"]
+[ext_resource type="Resource" uid="uid://dhjcquro1alts" path="res://Data/Vairables/Has_RedHerring.tres" id="3_mdhnd"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="4_8sxms"]
+[ext_resource type="Resource" uid="uid://bt7yln5u1vwmb" path="res://Data/Characters/Baby.tres" id="5_6v6cv"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="6_3dly5"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="7_xuh1b"]
+
+[sub_resource type="Resource" id="Resource_cvcky"]
+script = ExtResource("2_erejb")
+Variable = ExtResource("1_ogfhj")
+Operator = 0
+Comparator = 0
+
+[sub_resource type="Resource" id="Resource_hpks2"]
+script = ExtResource("2_erejb")
+Variable = ExtResource("3_mdhnd")
+Operator = 0
+Comparator = 0
+
+[sub_resource type="Resource" id="Resource_46luk"]
+script = ExtResource("4_8sxms")
+Conditions = Array[Object]([SubResource("Resource_cvcky"), SubResource("Resource_hpks2")])
+
+[sub_resource type="Resource" id="Resource_0hhb8"]
+script = ExtResource("6_3dly5")
+Text = "Yo, you found my \"special balloon\" yet?"
+SpeakingCharacter = ExtResource("5_6v6cv")
+
+[sub_resource type="Resource" id="Resource_bkmri"]
+script = ExtResource("6_3dly5")
+Text = "Not yet."
+SpeakingCharacter = ExtResource("7_xuh1b")
+
+[resource]
+script = ExtResource("1_snir1")
+Priority = 0
+IsRepeatable = true
+DialogueConditions = SubResource("Resource_46luk")
+LinesInDialogue = Array[Object]([SubResource("Resource_0hhb8"), SubResource("Resource_bkmri")])
+RememberOnCompletion = null

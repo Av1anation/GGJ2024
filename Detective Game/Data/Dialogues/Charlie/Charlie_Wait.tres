@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=8 format=3 uid="uid://desukmiaxdnu3"]
+
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_1vokm"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_vvi2p"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_21npg"]
+[ext_resource type="Resource" uid="uid://b5pmhw18wk12p" path="res://Data/Characters/ChalkPerson.tres" id="3_kc0vi"]
+
+[sub_resource type="Resource" id="Resource_a47lp"]
+script = ExtResource("2_21npg")
+Text = "Could you stay here and keep a lookout for any aliens for me?"
+SpeakingCharacter = ExtResource("1_1vokm")
+
+[sub_resource type="Resource" id="Resource_h42cp"]
+script = ExtResource("2_21npg")
+Text = "I, um, I'm not going anywhere."
+SpeakingCharacter = ExtResource("3_kc0vi")
+
+[sub_resource type="Resource" id="Resource_onrb0"]
+script = ExtResource("2_21npg")
+Text = "Thanks!"
+SpeakingCharacter = ExtResource("1_1vokm")
+
+[resource]
+script = ExtResource("1_vvi2p")
+Priority = -1
+IsRepeatable = true
+LinesInDialogue = Array[Object]([SubResource("Resource_a47lp"), SubResource("Resource_h42cp"), SubResource("Resource_onrb0")])
+RememberOnCompletion = null

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bt7yln5u1vwmb"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="1_e5qtc"]
+[ext_resource type="Texture2D" uid="uid://cakl1knp6pkby" path="res://Art/Dialogue/Icons/baby_portrait.png" id="1_mmqex"]
+
+[resource]
+script = ExtResource("1_e5qtc")
+Name = "Bert"
+Faceplate = ExtResource("1_mmqex")

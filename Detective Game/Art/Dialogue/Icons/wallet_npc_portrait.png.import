@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ernm736h41en"
-path="res://.godot/imported/Folder.png-b7342d15597dcdd83182dee062848f81.ctex"
+uid="uid://dea5xv0qf16m1"
+path="res://.godot/imported/wallet_npc_portrait.png-81ef5561fd2aea6ca9e25086caa91f29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Dialogue/Folder.png"
-dest_files=["res://.godot/imported/Folder.png-b7342d15597dcdd83182dee062848f81.ctex"]
+source_file="res://Art/Dialogue/Icons/wallet_npc_portrait.png"
+dest_files=["res://.godot/imported/wallet_npc_portrait.png-81ef5561fd2aea6ca9e25086caa91f29.ctex"]
 
 [params]
 

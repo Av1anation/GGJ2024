@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dxi4sy8tidocf"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="1_guw6u"]
-[ext_resource type="Texture2D" uid="uid://ernm736h41en" path="res://Art/Dialogue/Folder.png" id="2_ej0iu"]
-[ext_resource type="Texture2D" uid="uid://dllhdp57tdfwg" path="res://Art/Dialogue/PhoneIcon.png" id="3_bx4qu"]
-[ext_resource type="Texture2D" uid="uid://bomd64hpvnj52" path="res://Art/Dialogue/DIALOGUE_MARKER.png" id="3_n2mul"]
+[ext_resource type="Texture2D" uid="uid://ernm736h41en" path="res://Art/Dialogue/UI/Folder.png" id="2_ej0iu"]
+[ext_resource type="Texture2D" uid="uid://dllhdp57tdfwg" path="res://Art/Dialogue/UI/PhoneIcon.png" id="3_bx4qu"]
+[ext_resource type="Texture2D" uid="uid://bomd64hpvnj52" path="res://Art/Dialogue/UI/DIALOGUE_MARKER.png" id="3_n2mul"]
 
 [node name="DialogueUi" type="Control" node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
 process_mode = 3

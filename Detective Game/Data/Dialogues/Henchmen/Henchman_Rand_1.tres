@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://wxoou6bkcm07"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_y6j7x"]
+
+[resource]
+script = ExtResource("1_y6j7x")
+Priority = 0
+IsRepeatable = true
+LinesInDialogue = null
+RememberOnCompletion = null

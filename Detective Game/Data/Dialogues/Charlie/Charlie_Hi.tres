@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=10 format=3 uid="uid://igutxf6paaqo"]
+
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_27n56"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_lm1ip"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_78hum"]
+[ext_resource type="Resource" uid="uid://b5pmhw18wk12p" path="res://Data/Characters/ChalkPerson.tres" id="3_ffgxs"]
+
+[sub_resource type="Resource" id="Resource_5b8bq"]
+script = ExtResource("2_78hum")
+Text = "Excuse me, have you seen any aliens around?"
+SpeakingCharacter = ExtResource("1_27n56")
+
+[sub_resource type="Resource" id="Resource_ewmbw"]
+script = ExtResource("2_78hum")
+Text = "What? Uh, no..."
+SpeakingCharacter = ExtResource("3_ffgxs")
+
+[sub_resource type="Resource" id="Resource_4g271"]
+script = ExtResource("2_78hum")
+Text = "What happened to you then?"
+SpeakingCharacter = ExtResource("1_27n56")
+
+[sub_resource type="Resource" id="Resource_bwkx3"]
+script = ExtResource("2_78hum")
+Text = "I... Uh... Fell from a high place. Completely by accident!"
+SpeakingCharacter = ExtResource("3_ffgxs")
+
+[sub_resource type="Resource" id="Resource_prk68"]
+script = ExtResource("2_78hum")
+Text = "I see."
+SpeakingCharacter = ExtResource("1_27n56")
+
+[resource]
+script = ExtResource("1_lm1ip")
+Priority = 0
+IsRepeatable = false
+LinesInDialogue = Array[Object]([SubResource("Resource_5b8bq"), SubResource("Resource_ewmbw"), SubResource("Resource_4g271"), SubResource("Resource_bwkx3"), SubResource("Resource_prk68")])
+RememberOnCompletion = null
