@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=15 format=3 uid="uid://daymeg7bcabh4"]
+
+[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="1_40fjw"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_k3xr2"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_1xmoq"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_bbwye"]
+[ext_resource type="Resource" uid="uid://bt7yln5u1vwmb" path="res://Data/Characters/Baby.tres" id="4_2pj61"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="5_xnijs"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="6_4ei4r"]
+
+[sub_resource type="Resource" id="Resource_21ij5"]
+script = ExtResource("2_1xmoq")
+Variable = ExtResource("1_40fjw")
+Operator = 0
+Comparator = 1
+
+[sub_resource type="Resource" id="Resource_xsnuk"]
+script = ExtResource("3_bbwye")
+Conditions = Array[Object]([SubResource("Resource_21ij5")])
+
+[sub_resource type="Resource" id="Resource_mo2ya"]
+script = ExtResource("5_xnijs")
+Text = "Yo, you found my \"special balloon\" yet?"
+SpeakingCharacter = ExtResource("4_2pj61")
+
+[sub_resource type="Resource" id="Resource_011f7"]
+script = ExtResource("5_xnijs")
+Text = "Yes! Here it is."
+SpeakingCharacter = ExtResource("6_4ei4r")
+
+[sub_resource type="Resource" id="Resource_wx8f6"]
+script = ExtResource("5_xnijs")
+Text = "[i]Looks both ways[/i]"
+SpeakingCharacter = ExtResource("4_2pj61")
+
+[sub_resource type="Resource" id="Resource_44imn"]
+script = ExtResource("5_xnijs")
+Text = "[i]Slips you a twenty[/i]"
+SpeakingCharacter = ExtResource("6_4ei4r")
+
+[sub_resource type="Resource" id="Resource_4js0b"]
+script = ExtResource("5_xnijs")
+Text = "You never saw me. Got it?"
+SpeakingCharacter = ExtResource("4_2pj61")
+
+[resource]
+script = ExtResource("1_k3xr2")
+Priority = 1
+IsRepeatable = false
+DialogueConditions = SubResource("Resource_xsnuk")
+LinesInDialogue = Array[Object]([SubResource("Resource_mo2ya"), SubResource("Resource_011f7"), SubResource("Resource_wx8f6"), SubResource("Resource_44imn"), SubResource("Resource_4js0b")])
+RememberOnCompletion = null
