@@ -25,6 +25,7 @@ public partial class DialogueSystem : Control
     public override void _Ready()
     {
         Instance = this;
+        Visible = false;
     }
 
     public override void _Input(InputEvent @event)
