@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://qkn655o0qwrc"]
+[gd_scene load_steps=35 format=3 uid="uid://ddrc8xudlxago"]
 
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_5w88f"]
 [ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_1bgxv"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cdktm0ejxexpk" path="res://Art/ChalkPerson.png" id="15_c0qca"]
 [ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="16_3ejly"]
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="17_1twxr"]
-[ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="18_4al23"]
+[ext_resource type="PackedScene" path="res://Prefabs/StreetLight.tscn" id="18_4al23"]
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="19_323qj"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="20_tg4qp"]
 
