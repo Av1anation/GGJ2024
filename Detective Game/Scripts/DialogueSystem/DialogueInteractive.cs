@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Linq;
 
 public partial class DialogueInteractive : BasicInteractive
@@ -23,7 +24,19 @@ public partial class DialogueInteractive : BasicInteractive
 
     public void IntroCutscene()
     {
-        Interact();
+        DelayInvocation(Interact, 0.5f);
+    }
+
+    private async void DelayInvocation(Action callback, float seconds)
+    {
+        await Task.Delay((int)(seconds * 1000));
+
+        callback();
+    }
+
+    public void Interact()
+    {
+        Interact(reference: null);
     }
 
     public override void Interact(Node reference = null)
@@ -49,4 +62,12 @@ public partial class DialogueInteractive : BasicInteractive
         EmitSignal(SignalName.OnDialogueFinished);
     }
 
+}
+
+public static class WaitClass
+{
+    public static SignalAwaiter Wait(this Node n, float time)
+    {
+        return n.ToSignal(n.GetTree().CreateTimer(time), "timeout");
+    }
 }
