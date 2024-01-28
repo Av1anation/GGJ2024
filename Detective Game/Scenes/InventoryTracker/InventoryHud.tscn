@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bajb2ljytvpnp"]
+
+[node name="InventoryHud" type="MarginContainer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
