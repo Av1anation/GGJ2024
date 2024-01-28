@@ -12,7 +12,7 @@ size = Vector2(125, 125)
 [node name="Joseph\'sShit" type="Node2D"]
 
 [node name="TestInteractible" type="Area2D" parent="."]
-position = Vector2(371, 203)
+position = Vector2(876, 479)
 script = ExtResource("1_ep8pk")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestInteractible"]
@@ -54,10 +54,10 @@ grow_vertical = 0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 450.0
-offset_right = 925.0
-offset_bottom = 630.0
+offset_left = 593.0
+offset_top = 834.0
+offset_right = 1293.0
+offset_bottom = 1014.0
 
 [node name="BodyText" type="RichTextLabel" parent="Control/Panel"]
 layout_mode = 1
@@ -95,3 +95,5 @@ grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "[center][b]GoFuckYourself"
+
+[connection signal="OnInteracted" from="TestInteractible" to="Control" method="ShowNextLine"]

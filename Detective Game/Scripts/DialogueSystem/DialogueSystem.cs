@@ -16,15 +16,28 @@ public partial class DialogueSystem : Node
     [Export]
     public Dialogue TestDialogue;
 
+    private int _dialogueIndex = 0;
+
     public override void _Ready()
     {
-        DisplayDialogue(TestDialogue);
+        DisplayDialogue();
     }
 
-    public void DisplayDialogue(Dialogue dialogue)
+    public void DisplayDialogue()
     {
-        Icon.Texture = dialogue.LinesInDialogue.First().SpeakingCharacter.Faceplate;
-        NameplateText.Text = "[center][b]" + dialogue.LinesInDialogue.First().SpeakingCharacter.Name;
-        BodyText.Text = dialogue.LinesInDialogue.First().Text;
+        Icon.Texture = TestDialogue.LinesInDialogue.First().SpeakingCharacter.Faceplate;
+        NameplateText.Text = "[center][b]" + TestDialogue.LinesInDialogue.First().SpeakingCharacter.Name;
+        BodyText.Text = TestDialogue.LinesInDialogue.First().Text;
+    }
+
+    private void ResetDialogue()
+    {
+        _dialogueIndex = 0;
+    }
+
+    private void ShowNextLine()
+    {
+        _dialogueIndex = Mathf.Clamp(_dialogueIndex + 1, 0, TestDialogue.LinesInDialogue.Length);
+        DisplayDialogue();
     }
 }
