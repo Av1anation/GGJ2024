@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=23 format=3 uid="uid://1f2ru7i74in0"]
+
+[ext_resource type="Resource" uid="uid://cqo3xnpbaqlob" path="res://Data/Characters/Unknown.tres" id="1_3ydcs"]
+[ext_resource type="Resource" uid="uid://dsnkojrlsvxp5" path="res://Data/Vairables/Victory_Progress.tres" id="1_l2suq"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_yee00"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_fjq4u"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_ois5h"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_wk5sf"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="3_wwubh"]
+[ext_resource type="Resource" uid="uid://bffmg81y4ueqh" path="res://Data/Characters/AlienDon.tres" id="4_5j281"]
+[ext_resource type="Resource" uid="uid://injh0ayoahec" path="res://Data/Characters/AlienDetective.tres" id="5_gaoht"]
+
+[sub_resource type="Resource" id="Resource_gturb"]
+script = ExtResource("2_ois5h")
+Variable = ExtResource("1_l2suq")
+Operator = 0
+Comparator = 3
+
+[sub_resource type="Resource" id="Resource_25v6n"]
+script = ExtResource("3_wk5sf")
+Conditions = Array[Object]([SubResource("Resource_gturb")])
+
+[sub_resource type="Resource" id="Resource_iamke"]
+script = ExtResource("2_fjq4u")
+Text = "Well Detective, it seems you've gotten yourself in deep."
+SpeakingCharacter = ExtResource("1_3ydcs")
+
+[sub_resource type="Resource" id="Resource_urn0e"]
+script = ExtResource("2_fjq4u")
+Text = "Who's there?"
+SpeakingCharacter = ExtResource("3_wwubh")
+
+[sub_resource type="Resource" id="Resource_a71gj"]
+script = ExtResource("2_fjq4u")
+Text = "The Alien Mafia sends its regards."
+SpeakingCharacter = ExtResource("4_5j281")
+
+[sub_resource type="Resource" id="Resource_syd4c"]
+script = ExtResource("2_fjq4u")
+Text = "And I welcome you to our humble tractor beam testing facility."
+SpeakingCharacter = ExtResource("4_5j281")
+
+[sub_resource type="Resource" id="Resource_qkttu"]
+script = ExtResource("2_fjq4u")
+Text = "The Alien Mafia? Tractor beam testing facility? Wait..."
+SpeakingCharacter = ExtResource("3_wwubh")
+
+[sub_resource type="Resource" id="Resource_tquou"]
+script = ExtResource("2_fjq4u")
+Text = "Yes, and the xenon balloon smuggler!"
+SpeakingCharacter = ExtResource("4_5j281")
+
+[sub_resource type="Resource" id="Resource_knkp7"]
+script = ExtResource("2_fjq4u")
+Text = "There are so many safety violations around this park!"
+SpeakingCharacter = ExtResource("3_wwubh")
+
+[sub_resource type="Resource" id="Resource_mx6lv"]
+script = ExtResource("2_fjq4u")
+Text = "Huh? Wait-"
+SpeakingCharacter = ExtResource("4_5j281")
+
+[sub_resource type="Resource" id="Resource_s4j67"]
+script = ExtResource("2_fjq4u")
+Text = "Globohp - Space OSHA. You're being audited!"
+SpeakingCharacter = ExtResource("5_gaoht")
+
+[sub_resource type="Resource" id="Resource_ab8st"]
+script = ExtResource("2_fjq4u")
+Text = "And after what I've seen today, the Alien Mafia's going down."
+SpeakingCharacter = ExtResource("5_gaoht")
+
+[sub_resource type="Resource" id="Resource_cqsfh"]
+script = ExtResource("2_fjq4u")
+Text = "No!!!"
+SpeakingCharacter = ExtResource("4_5j281")
+
+[resource]
+script = ExtResource("1_yee00")
+Priority = 0
+IsRepeatable = true
+DialogueConditions = SubResource("Resource_25v6n")
+LinesInDialogue = Array[Object]([SubResource("Resource_iamke"), SubResource("Resource_urn0e"), SubResource("Resource_a71gj"), SubResource("Resource_syd4c"), SubResource("Resource_qkttu"), SubResource("Resource_tquou"), SubResource("Resource_knkp7"), SubResource("Resource_mx6lv"), SubResource("Resource_s4j67"), SubResource("Resource_ab8st"), SubResource("Resource_cqsfh")])
+RememberOnCompletion = null
