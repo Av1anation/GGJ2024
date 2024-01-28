@@ -8,7 +8,16 @@ public partial class ConditionalSet : Resource
     [Export]
     public Conditional[] Conditions;
 
-    public bool Status { get => CheckSetStatus(); }
+    public bool Status 
+    {
+        get
+        {
+            if (Conditions != null)
+                return CheckSetStatus();
+
+            return true;
+        }
+    }
 
     private bool CheckSetStatus()
     {

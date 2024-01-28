@@ -30,15 +30,15 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="TestDialogueActor" type="Area2D" parent="."]
 position = Vector2(1392, 472)
 script = ExtResource("5_qjrwr")
 PossibleDialogues = Array[Object]([ExtResource("5_lmcqr"), ExtResource("6_haheg")])
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="TestDialogueActor"]
 texture = ExtResource("7_im603")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestDialogueActor"]
 shape = SubResource("RectangleShape2D_hh44h")
 
 [node name="DialogueUi" parent="." instance=ExtResource("8_ogk3g")]
