@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cenbr1nyye1dr"]
+[gd_scene load_steps=38 format=3 uid="uid://cenbr1nyye1dr"]
 
 [ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="1_lwpig"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="2_theo3"]
@@ -17,6 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://d4h1ofyrxyyvb" path="res://Art/Tilemaps/Main/half_path_top_left.png" id="11_jsjtk"]
 [ext_resource type="Texture2D" uid="uid://b5rjprc4ntop2" path="res://Art/Tilemaps/Main/half_path_top_right.png" id="12_iwmp7"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="17_hu7jl"]
+[ext_resource type="PackedScene" uid="uid://cedpkn4rqrk44" path="res://Scenes/Interactibles/ItemInteractible.tscn" id="18_aa8np"]
+[ext_resource type="Resource" uid="uid://dqwl243qfqnyu" path="res://Scenes/InventoryTracker/Item/Items/DirtEvidence.tres" id="19_q8bs2"]
+[ext_resource type="Texture2D" uid="uid://bgdk6tissukj2" path="res://Art/Objects/scorched_earth_evidence.png" id="20_6dqig"]
+[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="21_oquo3"]
+[ext_resource type="Resource" uid="uid://ddkkf73wkas5e" path="res://Scenes/InventoryTracker/Item/Items/Balloon.tres" id="22_jl4ky"]
+[ext_resource type="Texture2D" uid="uid://b7n00auvokcna" path="res://Art/BALLOON_Placeholder.png" id="23_r2hli"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -210,4 +216,26 @@ position = Vector2(-855, 1070)
 scale = Vector2(0.75, 0.7)
 texture = ExtResource("9_8akbj")
 
+[node name="Dirt" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("18_aa8np")]
+position = Vector2(1092, 488)
+GM = NodePath("../Hud/InventoryGrid")
+Item = ExtResource("19_q8bs2")
+
+[node name="Sprite2D" parent="Dirt" index="0"]
+texture = ExtResource("20_6dqig")
+
 [node name="Hud" parent="." instance=ExtResource("17_hu7jl")]
+
+[node name="InteractionManager" parent="." instance=ExtResource("21_oquo3")]
+
+[node name="ItemInteractible" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("18_aa8np")]
+position = Vector2(-377, 1031)
+GM = NodePath("../Hud/InventoryGrid")
+Item = ExtResource("22_jl4ky")
+
+[node name="Sprite2D" parent="ItemInteractible" index="0"]
+texture = ExtResource("23_r2hli")
+
+[editable path="Dirt"]
+[editable path="Hud"]
+[editable path="ItemInteractible"]
