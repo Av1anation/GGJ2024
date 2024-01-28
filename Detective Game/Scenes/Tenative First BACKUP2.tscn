@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=46 format=3 uid="uid://b5g65xihccsm5"]
 
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
 [ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_p0icr"]
@@ -18,16 +18,17 @@
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="16_vpncf"]
 [ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="17_8kh0n"]
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
-[ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
+[ext_resource type="PackedScene" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
-[ext_resource type="PackedScene" uid="uid://bjls84wuemjen" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
-[ext_resource type="PackedScene" uid="uid://c7hu5ce1rkjc0" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
+[ext_resource type="PackedScene" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
+[ext_resource type="PackedScene" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
-[ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
+[ext_resource type="PackedScene" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
-[ext_resource type="PackedScene" uid="uid://bneudlx7hmgjk" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="PackedScene" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
+[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
 [ext_resource type="Texture2D" uid="uid://cfc6tcnwu1kr4" path="res://Art/Objects/tree.png" id="28_7b3qg"]
+[ext_resource type="AudioStream" uid="uid://dpx2qn2kyg1sl" path="res://Audio/old-macdonald-had-a-farm-background-short-music-for-video-30-second-188183.mp3" id="29_wm8p1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -306,7 +307,12 @@ scale = Vector2(0.72, 0.72)
 
 [node name="CollisionShape2D" parent="Layer 1/Baby Floats" index="2"]
 position = Vector2(31.9446, -45.8335)
-scale = Vector2(1, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Layer 1/Baby Floats"]
+process_mode = 3
+stream = ExtResource("29_wm8p1")
+volume_db = -10.0
+autoplay = true
 
 [node name="NPC Crowd" parent="Layer 1" instance=ExtResource("20_vigud")]
 
@@ -352,7 +358,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -370,7 +375,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -388,7 +392,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -406,7 +409,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -424,7 +426,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -442,7 +443,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -460,7 +460,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -478,7 +477,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -496,7 +494,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -514,7 +511,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -532,7 +528,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -550,7 +545,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -568,7 +562,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -586,7 +579,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -604,7 +596,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -622,7 +613,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -640,7 +630,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -658,7 +647,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -676,7 +664,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -694,7 +681,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -712,7 +698,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -730,7 +715,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -748,7 +732,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -766,7 +749,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -784,7 +766,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -802,7 +783,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -820,7 +800,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -838,7 +817,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -856,7 +834,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -874,7 +851,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -892,7 +868,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -911,7 +886,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -930,7 +904,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -949,7 +922,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -968,7 +940,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -987,7 +958,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1006,7 +976,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1025,7 +994,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1044,7 +1012,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1063,7 +1030,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1082,7 +1048,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1101,7 +1066,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1120,7 +1084,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1139,7 +1102,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1158,7 +1120,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1177,7 +1138,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1196,7 +1156,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1215,7 +1174,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1234,7 +1192,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1253,7 +1210,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1272,7 +1228,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1291,7 +1246,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1310,7 +1264,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1329,7 +1282,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1348,7 +1300,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1367,7 +1318,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1386,7 +1336,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1405,7 +1354,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1424,7 +1372,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1443,7 +1390,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1462,7 +1408,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1481,7 +1426,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1506,7 +1450,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1531,7 +1474,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
@@ -1555,7 +1497,6 @@ modulate = Color(0, 0, 0, 0.545098)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(111.581, -127)
-scale = Vector2(1, 1)
 skew = 0.584685
 texture = ExtResource("28_7b3qg")
 
