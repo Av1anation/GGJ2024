@@ -24,8 +24,19 @@ public partial class DialogueInteractive : BasicInteractive
 
     public void IntroCutscene()
     {
-        this.Wait(0.5f);
-        Interact();
+        DelayInvocation(Interact, 0.5f);
+    }
+
+    private async void DelayInvocation(Action callback, float seconds)
+    {
+        await Task.Delay((int)(seconds * 1000));
+
+        callback();
+    }
+
+    public void Interact()
+    {
+        Interact(reference: null);
     }
 
     public override void Interact(Node reference = null)
