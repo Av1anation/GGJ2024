@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cyi5udmfioajj"]
+
+[node name="CreditScene" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 200
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center] 
+
+Ellie chastain: Artist
+
+Eric Moser: UX design & Programmer
+
+Joseph knezek: Narrative Designer & Programmer
+
+Matt Peterson: Technical design & Programmer
+
+Sounds Provided by: ZapSplat
+https://www.zapsplat.com"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
