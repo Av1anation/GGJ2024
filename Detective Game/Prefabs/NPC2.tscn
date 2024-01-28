@@ -19,8 +19,8 @@ script = ExtResource("1_hf6si")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0.278431, 0.278431, 0.278431, 0.415686)
-position = Vector2(173.438, -12.5)
-skew = 0.925025
+position = Vector2(-185.938, -21.875)
+skew = -0.855211
 texture = ExtResource("2_jbvg5")
 offset = Vector2(0, 90)
 
