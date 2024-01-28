@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bomd64hpvnj52" path="res://Art/Dialogue/DIALOGUE_MARKER.png" id="3_n2mul"]
 
 [node name="DialogueUi" type="Control" node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

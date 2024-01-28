@@ -44,6 +44,7 @@ public partial class DialogueSystem : Control
     {
         ResetDialogue();
         Visible = true;
+        GetTree().Paused = true;
 
         GetValidDialogues();
 
@@ -97,6 +98,7 @@ public partial class DialogueSystem : Control
     private void FinishDialogue()
     {
         Visible = false;
+        GetTree().Paused = false;
 
         foreach (Remember item in _currentDialogue.RememberOnCompletion)
         {
