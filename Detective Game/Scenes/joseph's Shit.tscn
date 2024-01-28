@@ -24,7 +24,7 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText", "ClickToContinue")]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -42,7 +42,6 @@ Icon = NodePath("Panel/Icon")
 NameplateText = NodePath("Panel/Nameplate")
 BodyText = NodePath("Panel/BodyText")
 TestDialogue = ExtResource("5_lmcqr")
-ClickToContinue = NodePath("../TestInteractible")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_direction = 2

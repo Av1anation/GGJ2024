@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dqwl243qfqnyu"]
+
+[ext_resource type="Texture2D" uid="uid://bgdk6tissukj2" path="res://Art/Objects/scorched_earth_evidence.png" id="1_gfho4"]
+[ext_resource type="Script" path="res://Scenes/InventoryTracker/Item/ItemData.cs" id="1_i3rkb"]
+
+[resource]
+script = ExtResource("1_i3rkb")
+Name = "Suspicious Dirt"
+Description = "Someone put a shovel here"
+Stackable = true
+Sprite = ExtResource("1_gfho4")
