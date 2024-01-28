@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=9 format=3 uid="uid://vvewlrglb1k1"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=9 format=3 uid="uid://ba4e3bicio3xm"]
 
 [ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="1_ctwjn"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_tjv0o"]
-[ext_resource type="Resource" uid="uid://bqn6k8xhb0jba" path="res://Data/Characters/Phone.tres" id="2_ccv38"]
+[ext_resource type="Resource" path="res://Data/Characters/Phone.tres" id="2_ccv38"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="3_4hu4x"]
 
 [sub_resource type="Resource" id="Resource_gyiqp"]

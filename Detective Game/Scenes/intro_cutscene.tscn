@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="1_4xtde"]
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_5dg7j"]
 [ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="3_1b1le"]
-[ext_resource type="Resource" path="res://Data/Dialogues/World/Phone_Opening.tres" id="3_5faux"]
+[ext_resource type="Resource" uid="uid://ba4e3bicio3xm" path="res://Data/Dialogues/World/Phone_Opening.tres" id="3_5faux"]
 [ext_resource type="PackedScene" uid="uid://6auwbtvdp1e0" path="res://Scenes/InventoryTracker/InventoryGrid.tscn" id="4_733h6"]
 [ext_resource type="PackedScene" uid="uid://dxi4sy8tidocf" path="res://Scenes/Dialogue/DialogueUI.tscn" id="5_i1dy5"]
 
