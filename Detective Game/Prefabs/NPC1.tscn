@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjls84wuemjen"]
+[gd_scene load_steps=5 format=3 uid="uid://bjls84wuemjen"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="1_ireej"]
 [ext_resource type="Texture2D" uid="uid://cyjjkalyghdm7" path="res://Art/NPC/npc1.png" id="2_2stg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh44h"]
 size = Vector2(215.625, 310.938)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy1mg"]
+size = Vector2(76.5625, 138.125)
 
 [node name="NPC" type="Area2D"]
 z_index = 1
@@ -26,3 +29,9 @@ texture = ExtResource("2_2stg1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5625, -3.90625)
 shape = SubResource("RectangleShape2D_hh44h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.78125, 59.0625)
+shape = SubResource("RectangleShape2D_sy1mg")

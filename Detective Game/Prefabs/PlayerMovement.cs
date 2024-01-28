@@ -26,30 +26,30 @@ public partial class PlayerMovement : CharacterBody2D
 	{
 		if(InputVelocity.X == 1)
 		{
-			if (LastInputDir.Y == -1)
+			if (LastInputDir.Y < 0)
 				Sprite.Play("Idle RU");
-			else if (LastInputDir.Y == 1 || LastInputDir.Y == 0)
+			else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
 				Sprite.Play("Idle RD");
 		}
-		if(InputVelocity.X == -1)
+		if(InputVelocity.X < 0)
 		{
-			if (LastInputDir.Y == -1)
+			if (LastInputDir.Y < 0)
 				Sprite.Play("Idle LU");
-			else if (LastInputDir.Y == 1 || LastInputDir.Y == 0)
+			else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
 				Sprite.Play("Idle LD");
 		}		
-		if(InputVelocity.Y == -1)
+		if(InputVelocity.Y < 0)
 		{
-			if (LastInputDir.X == -1)
+			if (LastInputDir.X < 0)
 				Sprite.Play("Idle LU");
-			else if (LastInputDir.X == 1)
+			else if (LastInputDir.X > 0)
 				Sprite.Play("Idle RU");
 		}
-		if(InputVelocity.Y == 1)
+		if(InputVelocity.Y > 0)
 		{
-			if (LastInputDir.X == -1)
+			if (LastInputDir.X < 0)
 				Sprite.Play("Idle LD");
-			else if (LastInputDir.X == 1)
+			else if (LastInputDir.X > 0)
 				Sprite.Play("Idle RD");
 		}
 	}
@@ -71,9 +71,9 @@ public partial class PlayerMovement : CharacterBody2D
 	private void GetInputs()
 	{
 		if (Input.IsActionPressed("move_Up"))
-			InputVelocity.Y = -1;
+			InputVelocity.Y = -.5f;
 		else if (Input.IsActionPressed("move_Down"))
-			InputVelocity.Y = 1;
+			InputVelocity.Y = .5f;
 		else
 			InputVelocity.Y = 0;
 
