@@ -1,8 +1,13 @@
-[gd_scene format=3 uid="uid://6auwbtvdp1e0"]
+[gd_scene load_steps=3 format=3 uid="uid://6auwbtvdp1e0"]
+
+[ext_resource type="Script" path="res://Scenes/InventoryTracker/GridManager.cs" id="1_nbfbu"]
+[ext_resource type="Resource" uid="uid://dqwl243qfqnyu" path="res://Scenes/InventoryTracker/Item/Items/DirtEvidence.tres" id="2_aj2l4"]
 
 [node name="InventoryGrid" type="PanelContainer"]
 offset_right = 16.0
 offset_bottom = 16.0
+script = ExtResource("1_nbfbu")
+TestItem = ExtResource("2_aj2l4")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

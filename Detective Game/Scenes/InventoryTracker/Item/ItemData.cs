@@ -11,8 +11,8 @@ public partial class ItemData : Resource
     string Description = "";
 
     [Export]
-    bool Stackable = false;
+    public bool Stackable = false;
 
     [Export]
-    CompressedTexture2D Sprite;
+    public CompressedTexture2D Sprite;
 }
