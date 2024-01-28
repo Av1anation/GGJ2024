@@ -12,15 +12,12 @@ public partial class BasicInteractive : Area2D, IInteractive
     {
         base._Ready();
 
-        GD.Print("Setting up mouse events");
-
         MouseEntered += OnMouseEntered;
         MouseExited += OnMouseExited;
     }
 
     public void Interact(Node reference = null)
     {
-        GD.Print("I was clicked!");
         OnInteract?.Invoke();
         EmitSignal(SignalName.OnInteracted);
     }
@@ -37,11 +34,11 @@ public partial class BasicInteractive : Area2D, IInteractive
 
     public void OnSelected()
     {
-        GD.Print($"{Name} was selected.");
+        //GD.Print($"{Name} was selected.");
     }
 
     public void OnDeselected()
     {
-        GD.Print($"{Name} was deselected.");
+        //GD.Print($"{Name} was deselected.");
     }
 }
