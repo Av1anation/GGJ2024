@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkv4o4hges12j"]
+[gd_scene load_steps=8 format=3 uid="uid://bkv4o4hges12j"]
 
 [ext_resource type="Script" path="res://Scripts/Interactives/BasicInteractive.cs" id="1_ep8pk"]
 [ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="1_fej4j"]
 [ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="3_7q252"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="4_bc40h"]
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="5_lmcqr"]
+[ext_resource type="Resource" uid="uid://eob8gjuv04hh" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
 size = Vector2(125, 125)
@@ -24,7 +25,7 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText", "InteractiveNPC")]
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -41,7 +42,8 @@ script = ExtResource("4_bc40h")
 Icon = NodePath("Panel/Icon")
 NameplateText = NodePath("Panel/Nameplate")
 BodyText = NodePath("Panel/BodyText")
-TestDialogue = ExtResource("5_lmcqr")
+PossibleDialogues = Array[Object]([ExtResource("5_lmcqr"), ExtResource("6_haheg")])
+InteractiveNPC = NodePath("../TestInteractible")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_direction = 2
