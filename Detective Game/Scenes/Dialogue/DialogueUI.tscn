@@ -87,7 +87,7 @@ scale = Vector2(1.4, 1.4)
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
-text = "[center][b]GoFuckYourself"
+text = "[center][b]This is an Error!"
 scroll_active = false
 
 [node name="E to continue" type="RichTextLabel" parent="Panel"]
