@@ -16,12 +16,17 @@ public partial class Menu : MarginContainer
 	private void OnPlayPressed()
 	{
 
-		GetTree().ChangeSceneToFile("res://Scenes/Tenative First BACKUP2.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/intro_cutscene.tscn");
 
     }
 
 	private void OnQuitPressed()
 	{
 		GetTree().Quit();
+	}
+
+	private void OnCreditsPressed()
+	{
+
 	}
 }
