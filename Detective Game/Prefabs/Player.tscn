@@ -56,31 +56,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
-z_index = 1
-y_sort_enabled = true
-
-[node name="Locomotion" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(1, 0.985543)
 motion_mode = 1
 script = ExtResource("1_vo5wg")
 Speed = 1000.0
 
-[node name="Physics Collider" type="CollisionShape2D" parent="Locomotion"]
+[node name="Physics Collider" type="CollisionShape2D" parent="."]
 z_index = 2
 position = Vector2(0, 40.0794)
 shape = SubResource("RectangleShape2D_d068k")
 
-[node name="Trigger Detection" type="Area2D" parent="Locomotion"]
+[node name="Trigger Detection" type="Area2D" parent="."]
 scale = Vector2(1, 1.01467)
 
-[node name="Trigger Collider" type="CollisionShape2D" parent="Locomotion/Trigger Detection"]
+[node name="Trigger Collider" type="CollisionShape2D" parent="Trigger Detection"]
 shape = SubResource("RectangleShape2D_76kl6")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="Locomotion"]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.507334)
 sprite_frames = SubResource("SpriteFrames_473pj")
 animation = &"Idle RU"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-editor_draw_limits = true
