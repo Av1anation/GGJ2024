@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/Interactives/BasicInteractive.cs" id="1_ep8pk"]
 [ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="1_fej4j"]
 [ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="3_7q252"]
-[ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="4_bc40h"]
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="5_lmcqr"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="5_qjrwr"]
 [ext_resource type="Resource" uid="uid://eob8gjuv04hh" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
 [ext_resource type="Texture2D" uid="uid://cdktm0ejxexpk" path="res://Art/ChalkPerson.png" id="7_im603"]
+[ext_resource type="PackedScene" uid="uid://dxi4sy8tidocf" path="res://Scenes/Dialogue/DialogueUI.tscn" id="8_ogk3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
 size = Vector2(125, 125)
@@ -30,97 +30,6 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
-visible = false
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 1150.0
-offset_bottom = 650.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("4_bc40h")
-Icon = NodePath("Panel/Icon")
-NameplateText = NodePath("Panel/Nameplate")
-BodyText = NodePath("Panel/BodyText")
-
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
-layout_direction = 2
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 225.0
-offset_top = -200.0
-offset_right = 925.0
-grow_vertical = 0
-
-[node name="Panel" type="Panel" parent="Control"]
-layout_mode = 0
-offset_left = 593.0
-offset_top = 834.0
-offset_right = 1293.0
-offset_bottom = 1014.0
-
-[node name="Icon" type="TextureRect" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -180.0
-offset_right = 150.0
-offset_bottom = -30.0
-grow_vertical = 0
-texture = ExtResource("1_fej4j")
-expand_mode = 1
-
-[node name="BodyText" type="RichTextLabel" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 175.0
-offset_top = -180.0
-offset_right = 675.0
-offset_bottom = -30.0
-grow_vertical = 0
-theme_override_font_sizes/normal_font_size = 32
-text = "Hello World! This is a sample dialogue with a couple of lines of text."
-scroll_active = false
-
-[node name="Nameplate" type="RichTextLabel" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 150.0
-grow_vertical = 0
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "[center][b]GoFuckYourself"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -40.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/normal_font_size = 30
-bbcode_enabled = true
-text = "[center]E"
-scroll_active = false
-autowrap_mode = 0
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1392, 472)
 script = ExtResource("5_qjrwr")
@@ -131,3 +40,5 @@ texture = ExtResource("7_im603")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_hh44h")
+
+[node name="DialogueUi" parent="." instance=ExtResource("8_ogk3g")]
