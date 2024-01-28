@@ -20,6 +20,7 @@ public partial class DialogueSystem : Control
     private List<Dialogue> _possibleDialogues;
     private List<Dialogue> _validDialogues;
     private Dialogue _currentDialogue;
+    private DialogueInteractive _currentInteractive;
     private int _dialogueIndex = 0;
 
     public override void _Ready()
@@ -71,6 +72,7 @@ public partial class DialogueSystem : Control
 
     private void GetValidDialogues()
     {
+        GD.Print($"All dialogues:\n\t{string.Join("\n\t", _possibleDialogues.Select(x => x.LinesInDialogue.First().Text))}");
         _validDialogues = new();
 
         foreach (Dialogue item in _possibleDialogues)
@@ -80,6 +82,7 @@ public partial class DialogueSystem : Control
         }
 
         _validDialogues.Sort();
+        GD.Print($"Valid dialogues:\n\t{string.Join("\n\t", _validDialogues.Select(x => x.LinesInDialogue[0].Text))}");
     }
 
     private void ShowNextLine()
@@ -103,11 +106,12 @@ public partial class DialogueSystem : Control
         }
 
         if (!_currentDialogue.IsRepeatable)
-            _possibleDialogues.Remove(_currentDialogue);
+            _currentInteractive.PossibleDialoguesList.Remove(_currentDialogue);
     }
 
-    public void SetPossibleDialogues(Dialogue[] dialogues)
+    public void SetPossibleDialogues(List<Dialogue> dialogues, DialogueInteractive callbackObj)
     {
-        _possibleDialogues = dialogues.ToList();
+        _possibleDialogues = dialogues;
+        _currentInteractive = callbackObj;
     }
 }

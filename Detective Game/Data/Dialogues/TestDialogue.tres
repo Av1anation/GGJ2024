@@ -22,6 +22,7 @@ SpeakingCharacter = ExtResource("1_r0ra4")
 
 [resource]
 script = ExtResource("1_rg8oo")
-Priority = 0
+Priority = 10
+IsRepeatable = false
 LinesInDialogue = Array[Object]([SubResource("Resource_3hgkx"), SubResource("Resource_3eyo8"), SubResource("Resource_d2b3h")])
 RememberOnCompletion = null
