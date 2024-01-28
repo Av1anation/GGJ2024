@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Dialogue" load_steps=8 format=3 uid="uid://cjo0vwjx7sci1"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_uprwu"]
-[ext_resource type="Resource" path="res://Data/Characters/ChalkPerson.tres" id="4_ofcmw"]
+[ext_resource type="Resource" uid="uid://b5pmhw18wk12p" path="res://Data/Characters/ChalkPerson.tres" id="4_ofcmw"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="5_ot7jb"]
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="6_gsww0"]
 
@@ -22,4 +22,6 @@ SpeakingCharacter = ExtResource("4_ofcmw")
 
 [resource]
 script = ExtResource("1_uprwu")
+Priority = 0
 LinesInDialogue = Array[Object]([SubResource("Resource_ih153"), SubResource("Resource_xqi0p"), SubResource("Resource_26abo")])
+RememberOnCompletion = null
