@@ -20,7 +20,7 @@ public partial class InteractionManager : Node
 		if (@event is not InputEventMouseButton mouseButton)
 			return;
 
-		if (mouseButton.ButtonIndex == MouseButton.Left && CurrentInteractive != null && mouseButton.Pressed)
+		if (mouseButton.ButtonIndex == MouseButton.Left && CurrentInteractive != null && mouseButton.IsPressed())
 			CurrentInteractive.Interact();
 	}
 

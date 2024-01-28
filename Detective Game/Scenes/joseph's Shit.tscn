@@ -16,6 +16,7 @@ size = Vector2(125, 125)
 size = Vector2(275, 200)
 
 [node name="Joseph\'sShit" type="Node2D"]
+process_mode = 3
 
 [node name="TestInteractible" type="Area2D" parent="."]
 position = Vector2(421, 251)
@@ -30,6 +31,7 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="InteractionManager" parent="." instance=ExtResource("3_23whi")]
 
 [node name="TestDialogueActor" type="Area2D" parent="."]
+process_mode = 3
 position = Vector2(1392, 472)
 script = ExtResource("5_qjrwr")
 PossibleDialogues = Array[Object]([ExtResource("5_lmcqr"), ExtResource("6_haheg")])
