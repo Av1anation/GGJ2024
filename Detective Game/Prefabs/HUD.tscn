@@ -16,3 +16,4 @@ grow_vertical = 2
 [node name="InventoryHud" parent="Control" instance=ExtResource("1_hev22")]
 layout_mode = 1
 scale = Vector2(1.05031, 1.01226)
+VictoryTexture = null

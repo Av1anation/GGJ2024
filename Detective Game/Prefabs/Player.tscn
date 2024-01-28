@@ -76,9 +76,10 @@ shape = SubResource("RectangleShape2D_76kl6")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.305882)
-position = Vector2(-1, 77.1149)
+position = Vector2(-1, 1.01467)
 scale = Vector2(2.51852, 1)
 texture = ExtResource("2_on0qy")
+offset = Vector2(0, 77.675)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.507334)

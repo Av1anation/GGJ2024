@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://742ut0t1rded"]
+
+[ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="1_7674h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlf7t"]
+size = Vector2(43, 89)
+
+[node name="StreetLightPlaceholder" type="Sprite2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(3410, 2261)
+texture = ExtResource("1_7674h")
+offset = Vector2(0, -100)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.384314)
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(160, -5)
+scale = Vector2(1.25611, 0.934)
+skew = 0.872665
+texture = ExtResource("1_7674h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -158)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-12.5, 188.5)
+shape = SubResource("RectangleShape2D_hlf7t")
