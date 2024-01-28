@@ -16,29 +16,29 @@ public partial class BasicInteractive : Area2D, IInteractive
         MouseExited += OnMouseExited;
     }
 
-    public void Interact(Node reference = null)
+    public virtual void Interact(Node reference = null)
     {
         OnInteract?.Invoke();
         EmitSignal(SignalName.OnInteracted);
     }
 
-    private void OnMouseEntered()
+    protected virtual void OnMouseEntered()
     {
         InteractionManager.Instance.SetInteractive(this);
     }
 
-    private void OnMouseExited()
+    protected virtual void OnMouseExited()
     {
         InteractionManager.Instance.ClearInteractive(this);
     }
 
-    public void OnSelected()
+    public virtual void OnSelected()
     {
-        //GD.Print($"{Name} was selected.");
+
     }
 
-    public void OnDeselected()
+    public virtual void OnDeselected()
     {
-        //GD.Print($"{Name} was deselected.");
+
     }
 }

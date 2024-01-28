@@ -5,6 +5,8 @@ using System.Linq;
 
 public partial class DialogueSystem : Control
 {
+    public static DialogueSystem Instance { get; private set; }
+
     [Export]
     public TextureRect Icon;
 
@@ -14,20 +16,15 @@ public partial class DialogueSystem : Control
     [Export]
     public RichTextLabel BodyText;
 
-    [Export]
-    public Dialogue[] PossibleDialogues;
 
-    [Export]
-    public BasicInteractive InteractiveNPC;
-
-
+    private Dialogue[] _possibleDialogues;
     private List<Dialogue> _validDialogues;
     private Dialogue _currentDialogue;
     private int _dialogueIndex = 0;
 
     public override void _Ready()
     {
-        InteractiveNPC.OnInteract += OpenDialogue;
+        Instance = this;
     }
 
     public override void _Input(InputEvent @event)
@@ -48,7 +45,7 @@ public partial class DialogueSystem : Control
 
         GetValidDialogues();
 
-        if (PossibleDialogues.Length == 0)
+        if (_possibleDialogues.Length == 0)
             return;
 
         _currentDialogue = _validDialogues.First();
@@ -63,6 +60,9 @@ public partial class DialogueSystem : Control
 
     private void DisplayDialogue()
     {
+        if (_dialogueIndex >= _currentDialogue.LinesInDialogue.Length)
+            return;
+
         Icon.Texture = _currentDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Faceplate;
         NameplateText.Text = "[center][b]" + _currentDialogue.LinesInDialogue[_dialogueIndex].SpeakingCharacter.Name;
         BodyText.Text = _currentDialogue.LinesInDialogue[_dialogueIndex].Text;
@@ -72,15 +72,13 @@ public partial class DialogueSystem : Control
     {
         _validDialogues = new();
 
-        foreach (Dialogue item in PossibleDialogues)
+        foreach (Dialogue item in _possibleDialogues)
         {
             if (item.DialogueConditions.Status)
                 _validDialogues.Add(item);
         }
 
         _validDialogues.Sort();
-
-        GD.Print($"Dialogues sorted to {string.Join(", ", _validDialogues.Select(x => x.Priority))}");
     }
 
     private void ShowNextLine()
@@ -102,5 +100,10 @@ public partial class DialogueSystem : Control
         {
             item.DoRemember();
         }
+    }
+
+    public void SetPossibleDialogues(Dialogue[] dialogues)
+    {
+        _possibleDialogues = dialogues;
     }
 }

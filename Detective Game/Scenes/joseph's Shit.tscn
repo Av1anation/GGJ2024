@@ -1,19 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkv4o4hges12j"]
+[gd_scene load_steps=11 format=3 uid="uid://bkv4o4hges12j"]
 
 [ext_resource type="Script" path="res://Scripts/Interactives/BasicInteractive.cs" id="1_ep8pk"]
 [ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="1_fej4j"]
 [ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="3_7q252"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="4_bc40h"]
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="5_lmcqr"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="5_qjrwr"]
 [ext_resource type="Resource" uid="uid://eob8gjuv04hh" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
+[ext_resource type="Texture2D" uid="uid://cdktm0ejxexpk" path="res://Art/ChalkPerson.png" id="7_im603"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
 size = Vector2(125, 125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh44h"]
+size = Vector2(275, 200)
+
 [node name="Joseph\'sShit" type="Node2D"]
 
 [node name="TestInteractible" type="Area2D" parent="."]
-position = Vector2(873, 479)
+position = Vector2(421, 251)
 script = ExtResource("1_ep8pk")
 
 [node name="Sprite2D" type="Sprite2D" parent="TestInteractible"]
@@ -25,7 +30,7 @@ shape = SubResource("RectangleShape2D_uv2cn")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_7q252")
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText", "InteractiveNPC")]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -42,8 +47,6 @@ script = ExtResource("4_bc40h")
 Icon = NodePath("Panel/Icon")
 NameplateText = NodePath("Panel/Nameplate")
 BodyText = NodePath("Panel/BodyText")
-PossibleDialogues = Array[Object]([ExtResource("5_lmcqr"), ExtResource("6_haheg")])
-InteractiveNPC = NodePath("../TestInteractible")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_direction = 2
@@ -117,3 +120,14 @@ bbcode_enabled = true
 text = "[center]E"
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1392, 472)
+script = ExtResource("5_qjrwr")
+PossibleDialogues = Array[Object]([ExtResource("5_lmcqr"), ExtResource("6_haheg")])
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("7_im603")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hh44h")
