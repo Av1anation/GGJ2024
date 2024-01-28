@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ddkkf73wkas5e"]
 
 [ext_resource type="Script" path="res://Scenes/InventoryTracker/Item/ItemData.cs" id="1_2oypd"]
-[ext_resource type="Texture2D" uid="uid://b7n00auvokcna" path="res://Art/BALLOON_Placeholder.png" id="1_tx0og"]
+[ext_resource type="Texture2D" uid="uid://cbv7seq4pg560" path="res://Art/Objects/balloon_evidence.png" id="1_n5tms"]
 
 [resource]
 script = ExtResource("1_2oypd")
 Name = "Balloon"
 Description = "It looks so poppable"
 Stackable = false
-Sprite = ExtResource("1_tx0og")
+Sprite = ExtResource("1_n5tms")

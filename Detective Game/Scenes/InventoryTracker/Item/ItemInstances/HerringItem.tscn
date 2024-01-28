@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://7g81rpqelbk"]
+
+[ext_resource type="PackedScene" uid="uid://cedpkn4rqrk44" path="res://Scenes/Interactibles/ItemInteractible.tscn" id="1_fucio"]
+[ext_resource type="Resource" uid="uid://ctlxq5gwiluo5" path="res://Scenes/InventoryTracker/Item/Items/RedHerring.tres" id="2_8bsi1"]
+[ext_resource type="Texture2D" uid="uid://du2wxd0w6drvx" path="res://Art/Objects/Balloon evidence.png" id="3_5ukkh"]
+
+[node name="ItemInteractible" instance=ExtResource("1_fucio")]
+Item = ExtResource("2_8bsi1")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_5ukkh")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-5.25, -9.75)

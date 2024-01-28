@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://yyi5rh254raa"]
+
+[ext_resource type="PackedScene" uid="uid://cedpkn4rqrk44" path="res://Scenes/Interactibles/ItemInteractible.tscn" id="1_ar3jk"]
+[ext_resource type="Resource" uid="uid://ddkkf73wkas5e" path="res://Scenes/InventoryTracker/Item/Items/Balloon.tres" id="2_6e7hi"]
+[ext_resource type="Texture2D" uid="uid://cbv7seq4pg560" path="res://Art/Objects/balloon_evidence.png" id="3_b65kd"]
+
+[node name="ItemInteractible" instance=ExtResource("1_ar3jk")]
+Item = ExtResource("2_6e7hi")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_b65kd")
