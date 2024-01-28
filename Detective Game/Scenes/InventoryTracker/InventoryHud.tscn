@@ -1,27 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://bajb2ljytvpnp"]
+[gd_scene load_steps=4 format=3 uid="uid://bajb2ljytvpnp"]
 
 [ext_resource type="Script" path="res://Scenes/InventoryTracker/GoalHud.cs" id="1_2y4sd"]
-
-[sub_resource type="FontVariation" id="FontVariation_27cys"]
+[ext_resource type="Texture2D" uid="uid://ctd7l8mqgxvcw" path="res://Art/Menu/objective_1.png" id="2_ej56l"]
+[ext_resource type="Texture2D" uid="uid://bpfgpva0porp0" path="res://Art/Menu/objective_0.png" id="2_s2x4q"]
 
 [node name="InventoryHud" type="MarginContainer"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
+offset_left = -571.0
+offset_bottom = 323.0
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_bottom = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
 script = ExtResource("1_2y4sd")
+VictoryTexture = ExtResource("2_ej56l")
 
-[node name="Score" type="Label" parent="."]
+[node name="Score" type="TextureRect" parent="."]
+layout_direction = 2
 layout_mode = 2
-theme_override_fonts/font = SubResource("FontVariation_27cys")
-theme_override_font_sizes/font_size = 70
-text = "Find Report Submitter 0/1"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("2_s2x4q")
 
 [connection signal="ObjectiveComplete" from="." to="." method="OnObjectiveComplete"]

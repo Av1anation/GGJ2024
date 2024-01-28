@@ -5,7 +5,10 @@ public partial class GoalHud : MarginContainer
 {
 	[Signal]
 	public delegate void ObjectiveCompleteEventHandler();
-	
+
+	[Export]
+	public Texture2D VictoryTexture{ get; set; }
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -25,7 +28,7 @@ public partial class GoalHud : MarginContainer
 
 	private void OnObjectiveComplete()
 	{
-		GetNode<Label>("Score").Text = "Find Report Submitter 1/1";
+		GetNode<TextureRect>("Score").Texture = VictoryTexture;
 
     }
 
