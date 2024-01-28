@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxi4sy8tidocf"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueSystem.cs" id="1_guw6u"]
+[ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="2_d4gqa"]
+
+[node name="DialogueUi" type="Control" node_paths=PackedStringArray("Icon", "NameplateText", "BodyText")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_guw6u")
+Icon = NodePath("Panel/Icon")
+NameplateText = NodePath("Panel/Nameplate")
+BodyText = NodePath("Panel/BodyText")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 225.0
+offset_top = -200.0
+offset_right = 925.0
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 593.0
+offset_top = 834.0
+offset_right = 1293.0
+offset_bottom = 1014.0
+
+[node name="Icon" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_vertical = 0
+texture = ExtResource("2_d4gqa")
+expand_mode = 1
+
+[node name="BodyText" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 175.0
+offset_top = -180.0
+offset_right = 675.0
+offset_bottom = -30.0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 32
+text = "Hello World! This is a sample dialogue with a couple of lines of text."
+scroll_active = false
+
+[node name="Nameplate" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 150.0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "[center][b]GoFuckYourself"
+
+[node name="E to continue" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]E"
+scroll_active = false
+autowrap_mode = 0

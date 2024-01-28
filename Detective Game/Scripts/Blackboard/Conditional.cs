@@ -17,8 +17,6 @@ public partial class Conditional : Resource
 
     private bool CheckStatus()
     {
-        GD.Print($"Comparing {Variable.Value} to {Comparator}");
-
         switch (Operator)
         {
             case Operator.Equals:
