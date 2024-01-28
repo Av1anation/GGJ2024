@@ -16,6 +16,8 @@ public partial class DialogueSystem : Control
     [Export]
     public RichTextLabel BodyText;
 
+    public bool IsActive = false;
+
 
     private List<Dialogue> _possibleDialogues;
     private List<Dialogue> _validDialogues;
@@ -45,6 +47,7 @@ public partial class DialogueSystem : Control
         ResetDialogue();
         Visible = true;
         GetTree().Paused = true;
+        IsActive = true;
 
         GetValidDialogues();
 
@@ -84,7 +87,7 @@ public partial class DialogueSystem : Control
         _validDialogues.Sort();
     }
 
-    private void ShowNextLine()
+    public void ShowNextLine()
     {
         if (++_dialogueIndex == _currentDialogue.LinesInDialogue.Length)
         {
@@ -99,6 +102,7 @@ public partial class DialogueSystem : Control
     {
         Visible = false;
         GetTree().Paused = false;
+        IsActive = false;
 
         foreach (Remember item in _currentDialogue.RememberOnCompletion)
         {

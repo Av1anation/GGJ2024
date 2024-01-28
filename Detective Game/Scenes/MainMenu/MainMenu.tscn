@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc8x0yx7w7sge"]
+[gd_scene load_steps=6 format=3 uid="uid://cc8x0yx7w7sge"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/Menu.cs" id="1_jk7r8"]
 [ext_resource type="Texture2D" uid="uid://bb8ldp65swloo" path="res://Art/Menu/TITLE_BG_TEMP.png" id="2_u3t5a"]
 [ext_resource type="Texture2D" uid="uid://ulbkqlv331di" path="res://Art/Menu/PLAY.png" id="3_22u0c"]
 [ext_resource type="Texture2D" uid="uid://b6b70xk5jiqfk" path="res://Art/Menu/QUIT.png" id="4_6yu2o"]
+[ext_resource type="AudioStream" uid="uid://dq1idm4my4qpb" path="res://Audio/catch-it-117676.mp3" id="5_hr8ov"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -57,6 +58,10 @@ visible = false
 layout_mode = 2
 text = "Play"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hr8ov")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="OnPlayPressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="OnQuitPressed"]
