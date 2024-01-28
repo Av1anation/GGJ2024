@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://dq2w0rhy1ey38"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=5 format=3 uid="uid://dq2w0rhy1ey38"]
 
+[ext_resource type="Resource" uid="uid://dqwl243qfqnyu" path="res://Scenes/InventoryTracker/Item/Items/DirtEvidence.tres" id="1_e2ioa"]
 [ext_resource type="Script" path="res://Scenes/InventoryTracker/InventoryData.cs" id="1_ne3vp"]
+[ext_resource type="Script" path="res://Scenes/InventoryTracker/SlotData.cs" id="2_sd2bq"]
+
+[sub_resource type="Resource" id="Resource_cvxmu"]
+script = ExtResource("2_sd2bq")
+MyItem = ExtResource("1_e2ioa")
+quantity = 1
 
 [resource]
 script = ExtResource("1_ne3vp")
-Inventory = Array[Object]([null, null, null, null, null])
+Inventory = Array[Object]([SubResource("Resource_cvxmu"), null, null, null, null])
