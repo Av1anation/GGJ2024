@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=59 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://brl7pqlor6ljf" path="res://Art/Objects/ferris_wheel.png" id="13_crreq"]
 [ext_resource type="PackedScene" uid="uid://cjaj24pptnq6" path="res://Prefabs/Player.tscn" id="14_sfq6b"]
 [ext_resource type="PackedScene" uid="uid://qf0anb0bgsh5" path="res://Scenes/Interactibles/DialogueActor.tscn" id="15_wlh2t"]
-[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="16_vpncf"]
+[ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/Trash/TestDialogue.tres" id="16_vpncf"]
 [ext_resource type="Texture2D" uid="uid://bw124rbg5rc7i" path="res://Art/Objects/Paved Square.png" id="17_8kh0n"]
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
 [ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
 [ext_resource type="PackedScene" uid="uid://bneudlx7hmgjk" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
-[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
 [ext_resource type="AudioStream" uid="uid://ckl4gybbnjgu7" path="res://Audio/FX/zapsplat_brisbane_cbd_botanic_gardens_by_fountain_people_birds_place_construction_work_in_distance_21454.mp3" id="27_1h8vw"]
 [ext_resource type="Texture2D" uid="uid://cfc6tcnwu1kr4" path="res://Art/Objects/tree.png" id="28_7b3qg"]
 [ext_resource type="Texture2D" uid="uid://cnsokjrtvs56x" path="res://Art/Objects/roller_coaster.png" id="28_hoect"]
@@ -36,6 +36,9 @@
 [ext_resource type="Texture2D" uid="uid://qlmflpels56f" path="res://Art/Objects/SIGN_2.png" id="31_3t4o2"]
 [ext_resource type="Texture2D" uid="uid://bwh0jixhuvewn" path="res://Art/Objects/SIGN_3.png" id="32_nyun6"]
 [ext_resource type="Texture2D" uid="uid://bbwrcbxvmb0gi" path="res://Art/Objects/SIGN_1.png" id="33_5q6nu"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/BlackboardVar.cs" id="37_0t8f5"]
+[ext_resource type="Resource" uid="uid://cgsdfxb6dtofk" path="res://Data/Dialogues/World/Detective_CantLeave.tres" id="37_80r7u"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="37_fn74b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -171,6 +174,15 @@ size = Vector2(20, 51.157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfj8o"]
 size = Vector2(59.25, 41.5)
+
+[sub_resource type="Resource" id="Resource_f0s3b"]
+script = ExtResource("37_0t8f5")
+
+[sub_resource type="Resource" id="Resource_be4ca"]
+script = ExtResource("37_fn74b")
+Variable = SubResource("Resource_f0s3b")
+Operator = 0
+Comparator = 4
 
 [node name="TenativeFirst" type="Node2D"]
 script = ExtResource("1_2yhtq")
@@ -1712,11 +1724,14 @@ metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_xed2n")
+VictoryCondition = SubResource("Resource_be4ca")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(5687, 2763, 4883, 3259, 4696, 3166, 5513, 2677)
+polygon = PackedVector2Array(5825, 2682, 4883, 3259, 4696, 3166, 5615, 2612)
 
 [node name="Nonono Dialogue" parent="." instance=ExtResource("15_wlh2t")]
+position = Vector2(9608, 5312)
+PossibleDialogues = Array[Object]([ExtResource("37_80r7u")])
 
 [connection signal="OnGameFinished" from="Area2D" to="." method="LoadScene"]
 [connection signal="OnGameUnfinished" from="Area2D" to="Nonono Dialogue" method="Interact"]

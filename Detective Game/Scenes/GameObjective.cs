@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class GameObjective : Node2D
+public partial class GameObjective : Area2D
 {
 	[Export]
 	Conditional VictoryCondition;
@@ -11,7 +11,13 @@ public partial class GameObjective : Node2D
 	[Signal]
 	public delegate void OnGameUnfinishedEventHandler();
 
-	public void CheckProgress()
+    public override void _Ready()
+    {
+		base._Ready();
+		AreaEntered += (x) => CheckProgress();
+    }
+
+    public void CheckProgress()
 	{
 		if(VictoryCondition.Status)
 		{
