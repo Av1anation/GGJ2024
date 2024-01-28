@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Interactives/BasicInteractive.cs" id="1_ep8pk"]
 [ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="1_fej4j"]
-[ext_resource type="Script" path="res://Scripts/Interactives/InteractionManager.cs" id="3_7q252"]
+[ext_resource type="PackedScene" uid="uid://0ec0ysbsefpe" path="res://Scenes/Interactibles/InteractionManager.tscn" id="3_23whi"]
 [ext_resource type="Resource" uid="uid://nvu5ew051k87" path="res://Data/Dialogues/TestDialogue.tres" id="5_lmcqr"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="5_qjrwr"]
 [ext_resource type="Resource" uid="uid://cjo0vwjx7sci1" path="res://Data/Dialogues/SeenDialogueTest.tres" id="6_haheg"]
@@ -27,8 +27,7 @@ texture = ExtResource("1_fej4j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestInteractible"]
 shape = SubResource("RectangleShape2D_uv2cn")
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource("3_7q252")
+[node name="InteractionManager" parent="." instance=ExtResource("3_23whi")]
 
 [node name="TestDialogueActor" type="Area2D" parent="."]
 position = Vector2(1392, 472)
