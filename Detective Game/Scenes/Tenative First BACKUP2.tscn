@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=54 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -33,6 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://cfc6tcnwu1kr4" path="res://Art/Objects/tree.png" id="28_7b3qg"]
 [ext_resource type="Texture2D" uid="uid://cnsokjrtvs56x" path="res://Art/Objects/roller_coaster.png" id="28_hoect"]
 [ext_resource type="AudioStream" uid="uid://dpx2qn2kyg1sl" path="res://Audio/Music/old-macdonald-had-a-farm-background-short-music-for-video-30-second-188183.mp3" id="29_wm8p1"]
+[ext_resource type="Texture2D" uid="uid://qlmflpels56f" path="res://Art/Objects/SIGN_2.png" id="31_3t4o2"]
+[ext_resource type="Texture2D" uid="uid://bwh0jixhuvewn" path="res://Art/Objects/SIGN_3.png" id="32_nyun6"]
+[ext_resource type="Texture2D" uid="uid://bbwrcbxvmb0gi" path="res://Art/Objects/SIGN_1.png" id="33_5q6nu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -166,6 +169,9 @@ size = Vector2(98, 89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkaqr"]
 size = Vector2(20, 51.157)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfj8o"]
+size = Vector2(59.25, 41.5)
+
 [node name="TenativeFirst" type="Node2D"]
 script = ExtResource("1_2yhtq")
 ScenePath = "res://Scenes/end_cutscene.tscn"
@@ -240,7 +246,7 @@ rotation = 3.14159
 scale = Vector2(0.64, -0.64)
 
 [node name="Baby Floats" parent="Layer 1" instance=ExtResource("22_noedq")]
-position = Vector2(4129, 1390)
+position = Vector2(3500, 700)
 scale = Vector2(0.72, 0.72)
 
 [node name="CollisionShape2D" parent="Layer 1/Baby Floats" index="2"]
@@ -251,7 +257,7 @@ process_mode = 3
 stream = ExtResource("29_wm8p1")
 volume_db = -5.0
 autoplay = true
-max_distance = 1000.0
+max_distance = 700.0
 
 [node name="NPC Crowd" parent="Layer 1" instance=ExtResource("20_vigud")]
 
@@ -1627,6 +1633,78 @@ polygon = PackedVector2Array(480.769, -140.385, -1161.54, 671.154, -1913.46, -11
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Layer 1/StaticBody2D"]
 position = Vector2(323, 197)
 polygon = PackedVector2Array(4135, 3268, 6122, 2136, 7528, 3370, 5769, 4288)
+
+[node name="Sign2" type="Sprite2D" parent="Layer 1"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4097, 2538)
+scale = Vector2(2, 2)
+texture = ExtResource("31_3t4o2")
+offset = Vector2(0, -350)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Layer 1/Sign2"]
+position = Vector2(9.5, -199)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer 1/Sign2/StaticBody2D2"]
+position = Vector2(167, 18)
+shape = SubResource("RectangleShape2D_nfj8o")
+
+[node name="Sign3" type="Sprite2D" parent="Layer 1"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4116, 2140)
+scale = Vector2(2, 2)
+texture = ExtResource("32_nyun6")
+offset = Vector2(0, -150)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer 1/Sign3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer 1/Sign3/StaticBody2D"]
+position = Vector2(-253.5, 217)
+shape = SubResource("RectangleShape2D_nfj8o")
+
+[node name="Sign1" type="Sprite2D" parent="Layer 1"]
+z_index = 2
+position = Vector2(4088, 1952)
+scale = Vector2(2, 2)
+texture = ExtResource("33_5q6nu")
+metadata/_edit_lock_ = true
+
+[node name="Sign4" type="Sprite2D" parent="Layer 1"]
+modulate = Color(0, 0, 0, 0.14902)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4232, 2520)
+scale = Vector2(2, 2)
+skew = 0.898845
+texture = ExtResource("31_3t4o2")
+offset = Vector2(0, -350)
+metadata/_edit_lock_ = true
+
+[node name="Sign5" type="Sprite2D" parent="Layer 1"]
+modulate = Color(0, 0, 0, 0.14902)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4209, 2126)
+scale = Vector2(2, 2)
+skew = 0.898845
+texture = ExtResource("32_nyun6")
+offset = Vector2(0, -150)
+metadata/_edit_lock_ = true
+
+[node name="Sign6" type="Sprite2D" parent="Layer 1"]
+modulate = Color(0, 0, 0, 0.247059)
+z_index = 1
+y_sort_enabled = true
+position = Vector2(5294, 1222)
+rotation = -0.218166
+scale = Vector2(2, 2)
+skew = 0.898845
+texture = ExtResource("33_5q6nu")
+offset = Vector2(0, 500)
+metadata/_edit_lock_ = true
 
 [node name="Hud" parent="." instance=ExtResource("22_bimjp")]
 
