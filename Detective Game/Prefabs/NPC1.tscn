@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjls84wuemjen"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="1_ireej"]
+[ext_resource type="Texture2D" uid="uid://cyjjkalyghdm7" path="res://Art/NPC/npc1.png" id="2_2stg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh44h"]
+size = Vector2(215.625, 310.938)
+
+[node name="NPC" type="Area2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-134, 1905)
+scale = Vector2(0.64, 0.64)
+script = ExtResource("1_ireej")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0.278431, 0.278431, 0.278431, 0.415686)
+position = Vector2(173.438, -12.5)
+skew = 0.925025
+texture = ExtResource("2_2stg1")
+offset = Vector2(0, 90)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2stg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5625, -3.90625)
+shape = SubResource("RectangleShape2D_hh44h")

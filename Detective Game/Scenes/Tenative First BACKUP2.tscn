@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=42 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
 [ext_resource type="Texture2D" uid="uid://cxkli042tb2y7" path="res://Art/Tilemaps/Main/grass1.png" id="2_p0icr"]
@@ -20,10 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
 [ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
+[ext_resource type="PackedScene" uid="uid://bjls84wuemjen" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
+[ext_resource type="PackedScene" uid="uid://c7hu5ce1rkjc0" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
+[ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
 [ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
-[ext_resource type="Texture2D" uid="uid://bkb37ai3u30yy" path="res://Art/NPC/crowd1.png" id="24_lft8h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -194,7 +196,7 @@ texture = ExtResource("13_crreq")
 [node name="Player" parent="Layer 1" instance=ExtResource("14_sfq6b")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(5178, 2930)
+position = Vector2(-304, 1079)
 scale = Vector2(1, 1)
 Speed = 500.0
 
@@ -225,11 +227,6 @@ metadata/_edit_lock_ = true
 position = Vector2(1141.29, 657.11)
 rotation = 3.14159
 texture = ExtResource("17_8kh0n")
-
-[node name="CropCircleEvidence" type="Sprite2D" parent="Layer 1"]
-position = Vector2(-855, 1070)
-scale = Vector2(0.75, 0.7)
-texture = ExtResource("18_kr3wu")
 
 [node name="StreetLightPlaceholder" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(3410, 2350)
@@ -284,7 +281,17 @@ position = Vector2(6219, 3774)
 [node name="StreetLightPlaceholder8" parent="Layer 1" instance=ExtResource("19_tor8h")]
 position = Vector2(6859, 3349)
 
-[node name="Shadow" type="Sprite2D" parent="Layer 1"]
+[node name="NPC2" parent="Layer 1" instance=ExtResource("20_hh4lj")]
+position = Vector2(2985, 2096)
+rotation = 3.14159
+scale = Vector2(-0.64, -0.64)
+
+[node name="NPC" parent="Layer 1" instance=ExtResource("21_tr7mm")]
+position = Vector2(1690, 1701)
+
+[node name="NPC Crowd" parent="Layer 1" instance=ExtResource("20_vigud")]
+
+[node name="FountainShadow" type="Sprite2D" parent="Layer 1"]
 modulate = Color(0, 0, 0, 0.176471)
 z_index = 1
 y_sort_enabled = true
@@ -294,6 +301,11 @@ scale = Vector2(0.602411, 0.810849)
 skew = 0.811578
 texture = ExtResource("21_q6q7a")
 offset = Vector2(0, -300)
+
+[node name="CropCircleEvidence" type="Sprite2D" parent="Layer 1"]
+position = Vector2(-855, 1070)
+scale = Vector2(0.75, 0.7)
+texture = ExtResource("18_kr3wu")
 
 [node name="Fountain" type="Sprite2D" parent="Layer 1"]
 z_index = 1
@@ -316,15 +328,3 @@ metadata/_edit_lock_ = true
 [node name="Hud" parent="." instance=ExtResource("22_bimjp")]
 
 [node name="InteractionManager" parent="." instance=ExtResource("23_7niay")]
-
-[node name="Crowd1" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(-129, 965)
-scale = Vector2(0.51999, 0.51999)
-texture = ExtResource("24_lft8h")
-offset = Vector2(0, -78.015)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Crowd1"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crowd1/StaticBody2D"]
-polygon = PackedVector2Array(-201.927, -75.0013, -103.848, 19.2312, 5.76933, 11.5387, 100.002, 78.8477, 182.696, 69.2322, 217.312, -65.3857, 78.8476, -173.08, -92.3094, -184.619)
