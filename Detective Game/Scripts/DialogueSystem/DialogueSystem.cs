@@ -16,10 +16,14 @@ public partial class DialogueSystem : Node
     [Export]
     public Dialogue TestDialogue;
 
+    [Export]
+    public BasicInteractive ClickToContinue;
+
     private int _dialogueIndex = 0;
 
     public override void _Ready()
     {
+        ClickToContinue.OnInteract += ShowNextLine;
         DisplayDialogue();
     }
 
