@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bpg6cwueyayq5"]
 
-[ext_resource type="Texture2D" uid="uid://dllhdp57tdfwg" path="res://Art/Dialogue/PhoneIcon.png" id="1_eis7w"]
+[ext_resource type="Texture2D" uid="uid://dewag8hcixnqr" path="res://Art/Dialogue/Icons/detective_portrait.png" id="1_n3471"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="2_bojfx"]
 
 [resource]
 script = ExtResource("2_bojfx")
 Name = "Detective"
-Faceplate = ExtResource("1_eis7w")
+Faceplate = ExtResource("1_n3471")

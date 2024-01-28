@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=6 format=3 uid="uid://bvfc3lysiw1fb"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_c00r5"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_wsei2"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_0qfv6"]
+
+[sub_resource type="Resource" id="Resource_v78ra"]
+script = ExtResource("2_0qfv6")
+Text = "\"Big Time Crime Park\"..."
+SpeakingCharacter = ExtResource("1_wsei2")
+
+[sub_resource type="Resource" id="Resource_3i111"]
+script = ExtResource("2_0qfv6")
+Text = "Been getting a lot of reports about unusual happenings here."
+SpeakingCharacter = ExtResource("1_wsei2")
+
+[resource]
+script = ExtResource("1_c00r5")
+Priority = 0
+IsRepeatable = true
+LinesInDialogue = Array[Object]([SubResource("Resource_v78ra"), SubResource("Resource_3i111")])
+RememberOnCompletion = null

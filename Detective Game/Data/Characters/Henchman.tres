@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://b8orhshd5f3ua"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Character.cs" id="1_71qeb"]
+[ext_resource type="Texture2D" uid="uid://drpky8bqbyg4c" path="res://Art/Dialogue/Icons/security_portrait.png" id="1_nc6ah"]
+
+[resource]
+script = ExtResource("1_71qeb")
+Name = "Henchman"
+Faceplate = ExtResource("1_nc6ah")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bomd64hpvnj52"
-path="res://.godot/imported/DIALOGUE_MARKER.png-d2493948f61f67374bb8253acf526908.ctex"
+uid="uid://cakl1knp6pkby"
+path="res://.godot/imported/baby_portrait.png-1d849a670f355059179f4c25d00cdc96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Dialogue/DIALOGUE_MARKER.png"
-dest_files=["res://.godot/imported/DIALOGUE_MARKER.png-d2493948f61f67374bb8253acf526908.ctex"]
+source_file="res://Art/Dialogue/Icons/baby_portrait.png"
+dest_files=["res://.godot/imported/baby_portrait.png-1d849a670f355059179f4c25d00cdc96.ctex"]
 
 [params]
 
