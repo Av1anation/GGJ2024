@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://by5a88ss6nf1q" path="res://Art/Tilemaps/Main/half_path_right.png" id="10_8px0n"]
 [ext_resource type="Texture2D" uid="uid://d4h1ofyrxyyvb" path="res://Art/Tilemaps/Main/half_path_top_left.png" id="11_jsjtk"]
 [ext_resource type="Texture2D" uid="uid://b5rjprc4ntop2" path="res://Art/Tilemaps/Main/half_path_top_right.png" id="12_iwmp7"]
-[ext_resource type="Texture2D" uid="uid://bgdk6tissukj2" path="res://Art/Objects/scorched_earth_evidence.png" id="16_upjh6"]
+[ext_resource type="PackedScene" uid="uid://bajb2ljytvpnp" path="res://Scenes/InventoryTracker/InventoryHud.tscn" id="17_j808t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -199,15 +199,18 @@ position = Vector2(-833, 1241)
 scale = Vector2(0.734848, 0.562162)
 texture = ExtResource("5_hfo3w")
 
-[node name="ScorchedEarthEvidence" type="Sprite2D" parent="Layer 1"]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(-331, 990)
-scale = Vector2(2.055, 2.055)
-texture = ExtResource("16_upjh6")
-offset = Vector2(0, -14.04)
-
 [node name="CropCircleEvidence" type="Sprite2D" parent="."]
 position = Vector2(-855, 1070)
 scale = Vector2(0.75, 0.7)
 texture = ExtResource("9_8akbj")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="InventoryHud" parent="HUD" instance=ExtResource("17_j808t")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.5
+offset_right = 462.5
+offset_bottom = 196.0
+grow_horizontal = 2
