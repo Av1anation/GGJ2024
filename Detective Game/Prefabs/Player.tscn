@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjaj24pptnq6"]
+[gd_scene load_steps=12 format=3 uid="uid://cjaj24pptnq6"]
 
 [ext_resource type="Script" path="res://Prefabs/PlayerMovement.cs" id="1_vo5wg"]
 [ext_resource type="Texture2D" uid="uid://cargh1qau62v1" path="res://Art/Player/IdleDL.png" id="2_3vwfd"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ctunypidw0nku" path="res://Art/Player/IdleUL.png" id="3_67f8d"]
 [ext_resource type="Texture2D" uid="uid://cxb0gvwuf1cbf" path="res://Art/Player/IdleDR.png" id="4_syy6n"]
 [ext_resource type="Texture2D" uid="uid://c7uqabcuf1q8h" path="res://Art/Player/IdleUR.png" id="5_uhgnt"]
-[ext_resource type="AudioStream" uid="uid://btk2fw45hfn3e" path="res://Audio/FX/zapsplat_foley_footstep_single_wellington_boots_rubber_adults_on_gravel_stones_008_101972.mp3" id="7_ytk4v"]
+[ext_resource type="AudioStream" uid="uid://dgea4yk86igix" path="res://Audio/FX/zapsplat_foley_footstep_single_soccer_boot_run_grass_014_38194.mp3" id="7_truer"]
+[ext_resource type="AudioStream" uid="uid://b3etwx5tmnx0o" path="res://Audio/Music/018136_funny-music-orchestra-wav-54828.mp3" id="8_lwymk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d068k"]
 size = Vector2(46, 76.1002)
@@ -88,5 +89,10 @@ sprite_frames = SubResource("SpriteFrames_473pj")
 animation = &"Idle RU"
 
 [node name="Steps" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_ytk4v")
-volume_db = -10.0
+stream = ExtResource("7_truer")
+volume_db = -15.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_lwymk")
+volume_db = -7.0
+autoplay = true
