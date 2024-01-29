@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjaj24pptnq6"]
+[gd_scene load_steps=20 format=3 uid="uid://cjaj24pptnq6"]
 
 [ext_resource type="Script" path="res://Prefabs/PlayerMovement.cs" id="1_vo5wg"]
 [ext_resource type="Texture2D" uid="uid://cargh1qau62v1" path="res://Art/Player/IdleDL.png" id="2_3vwfd"]
@@ -6,8 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://ctunypidw0nku" path="res://Art/Player/IdleUL.png" id="3_67f8d"]
 [ext_resource type="Texture2D" uid="uid://cxb0gvwuf1cbf" path="res://Art/Player/IdleDR.png" id="4_syy6n"]
 [ext_resource type="Texture2D" uid="uid://c7uqabcuf1q8h" path="res://Art/Player/IdleUR.png" id="5_uhgnt"]
+[ext_resource type="Texture2D" uid="uid://ddyvwy71mg0wa" path="res://Art/Player/Walk_DL1.png" id="7_eoefx"]
 [ext_resource type="AudioStream" uid="uid://dgea4yk86igix" path="res://Audio/FX/zapsplat_foley_footstep_single_soccer_boot_run_grass_014_38194.mp3" id="7_truer"]
 [ext_resource type="AudioStream" uid="uid://b3etwx5tmnx0o" path="res://Audio/Music/018136_funny-music-orchestra-wav-54828.mp3" id="8_lwymk"]
+[ext_resource type="Texture2D" uid="uid://b1kxa8o0paaa2" path="res://Art/Player/Walk_DL2.png" id="8_v473u"]
+[ext_resource type="Texture2D" uid="uid://40ituujy6h1a" path="res://Art/Player/Walk_UL1.png" id="9_55k4m"]
+[ext_resource type="Texture2D" uid="uid://dnanx8sq0vadd" path="res://Art/Player/Walk_UL2.png" id="10_arah8"]
+[ext_resource type="Texture2D" uid="uid://b2exbfq4kf0mm" path="res://Art/Player/Walk_DR1.png" id="11_nu0rd"]
+[ext_resource type="Texture2D" uid="uid://dgki0tbmukpgh" path="res://Art/Player/Walk_DR2.png" id="12_atgf1"]
+[ext_resource type="Texture2D" uid="uid://bf8nqy3sjey7x" path="res://Art/Player/Walk_UR1.png" id="13_dtprq"]
+[ext_resource type="Texture2D" uid="uid://cbp347n7n4fvg" path="res://Art/Player/Walk_UR2.png" id="14_vc6wh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d068k"]
 size = Vector2(46, 76.1002)
@@ -48,14 +56,48 @@ animations = [{
 "name": &"Idle RU",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_eoefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_v473u")
+}],
 "loop": true,
 "name": &"Walk LD",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_55k4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_arah8")
+}],
+"loop": true,
+"name": &"Walk LU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nu0rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_atgf1")
+}],
 "loop": true,
 "name": &"Walk RD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_dtprq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vc6wh")
+}],
+"loop": true,
+"name": &"Walk UR",
 "speed": 5.0
 }]
 
@@ -86,7 +128,8 @@ offset = Vector2(0, 77.675)
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.507334)
 sprite_frames = SubResource("SpriteFrames_473pj")
-animation = &"Idle RU"
+animation = &"Walk UR"
+frame_progress = 0.364604
 
 [node name="Steps" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_truer")
