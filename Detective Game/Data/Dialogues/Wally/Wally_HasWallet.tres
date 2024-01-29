@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=15 format=3 uid="uid://mo0uxbkkb2wx"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_iadjo"]
+[ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="1_vnf48"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_xfp3v"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_8hcgh"]
+[ext_resource type="Resource" uid="uid://b4t5wkywv6edi" path="res://Data/Characters/Wally.tres" id="4_y0wgu"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="5_itssm"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="6_vacvl"]
+
+[sub_resource type="Resource" id="Resource_drnq7"]
+script = ExtResource("2_xfp3v")
+Variable = ExtResource("1_vnf48")
+Operator = 0
+Comparator = 1
+
+[sub_resource type="Resource" id="Resource_v52xr"]
+script = ExtResource("3_8hcgh")
+Conditions = Array[Object]([SubResource("Resource_drnq7")])
+
+[sub_resource type="Resource" id="Resource_hq71r"]
+script = ExtResource("5_itssm")
+Text = "Found my wallet yet?"
+SpeakingCharacter = ExtResource("4_y0wgu")
+
+[sub_resource type="Resource" id="Resource_imydy"]
+script = ExtResource("5_itssm")
+Text = "Sure did. Ganymede, huh? Hear it's lovely out there."
+SpeakingCharacter = ExtResource("6_vacvl")
+
+[sub_resource type="Resource" id="Resource_1b1wl"]
+script = ExtResource("5_itssm")
+Text = "Uh... Yeah! Uh, I'm a sci-fi enthusiast, you know..."
+SpeakingCharacter = ExtResource("4_y0wgu")
+
+[sub_resource type="Resource" id="Resource_1516o"]
+script = ExtResource("5_itssm")
+Text = "Me and a bunch of my friends got these gag IDs made."
+SpeakingCharacter = ExtResource("4_y0wgu")
+
+[sub_resource type="Resource" id="Resource_0cpfm"]
+script = ExtResource("5_itssm")
+Text = "Gag IDs, yeah."
+SpeakingCharacter = ExtResource("6_vacvl")
+
+[resource]
+script = ExtResource("1_iadjo")
+Priority = 5
+IsRepeatable = false
+DialogueConditions = SubResource("Resource_v52xr")
+LinesInDialogue = Array[Object]([SubResource("Resource_hq71r"), SubResource("Resource_imydy"), SubResource("Resource_1b1wl"), SubResource("Resource_1516o"), SubResource("Resource_0cpfm")])
+RememberOnCompletion = null

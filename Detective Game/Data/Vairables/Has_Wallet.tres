@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="BlackboardVar" load_steps=2 format=3 uid="uid://xby4n0mg3nx6"]
+
+[ext_resource type="Script" path="res://Scripts/Blackboard/BlackboardVar.cs" id="1_x5ls0"]
+
+[resource]
+script = ExtResource("1_x5ls0")
