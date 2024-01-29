@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dggup4np56mj2"]
+[gd_scene load_steps=2 format=3 uid="uid://dggup4np56mj2"]
+
+[ext_resource type="Script" path="res://Scenes/Blackboard/VariableSetter.cs" id="1_e70eu"]
 
 [node name="VariableSetter" type="Node"]
+script = ExtResource("1_e70eu")

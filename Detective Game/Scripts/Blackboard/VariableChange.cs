@@ -5,13 +5,13 @@ using System;
 public partial class VariableChange : Resource
 {
     [Export]
-    public BlackboardVar Variable;
+    public BlackboardVar Variable { get; set; }
 
     [Export]
-    public RememberOperator Operator;
+    public RememberOperator Operator {  get; set; }
 
     [Export]
-    public int Value;
+    public int Value { get; set; }
 
     public void ChangeVar()
     {
