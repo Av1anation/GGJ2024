@@ -36,34 +36,68 @@ public partial class PlayerMovement : CharacterBody2D
 
 	private void AnimateSprite()
 	{
-		if(InputVelocity.X == 1)
+		if(InputVelocity.Length() > 0)
 		{
-			if (LastInputDir.Y < 0)
-				Sprite.Play("Idle RU");
-			else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
-				Sprite.Play("Idle RD");
+			if(InputVelocity.X > 0)
+			{
+				if (LastInputDir.Y < 0)
+					Sprite.Play("Walk UR");
+				else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
+					Sprite.Play("Walk RD");
+			}
+			if(InputVelocity.X < 0)
+			{
+				if (LastInputDir.Y < 0)
+					Sprite.Play("Walk LU");
+				else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
+					Sprite.Play("Walk LD");
+			}		
+			if(InputVelocity.Y < 0)
+			{
+				if (LastInputDir.X < 0)
+					Sprite.Play("Walk LU");
+				else if (LastInputDir.X > 0)
+					Sprite.Play("Walk UR");
+			}
+			if(InputVelocity.Y > 0)
+			{
+				if (LastInputDir.X < 0)
+					Sprite.Play("Walk LD");
+				else if (LastInputDir.X > 0)
+					Sprite.Play("Walk RD");
+			}
 		}
-		if(InputVelocity.X < 0)
+		else
 		{
-			if (LastInputDir.Y < 0)
-				Sprite.Play("Idle LU");
-			else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
-				Sprite.Play("Idle LD");
-		}		
-		if(InputVelocity.Y < 0)
-		{
-			if (LastInputDir.X < 0)
-				Sprite.Play("Idle LU");
-			else if (LastInputDir.X > 0)
-				Sprite.Play("Idle RU");
-		}
-		if(InputVelocity.Y > 0)
-		{
-			if (LastInputDir.X < 0)
-				Sprite.Play("Idle LD");
-			else if (LastInputDir.X > 0)
-				Sprite.Play("Idle RD");
-		}
+            if (LastInputDir.X > 0)
+            {
+                if (LastInputDir.Y < 0)
+                    Sprite.Play("Idle RU");
+                else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
+                    Sprite.Play("Idle RD");
+            }
+            if (LastInputDir.X < 0)
+            {
+                if (LastInputDir.Y < 0)
+                    Sprite.Play("Idle LU");
+                else if (LastInputDir.Y > 0 || LastInputDir.Y == 0)
+                    Sprite.Play("Idle LD");
+            }
+            if (InputVelocity.Y < 0)
+            {
+                if (LastInputDir.X < 0)
+                    Sprite.Play("Idle LU");
+                else if (LastInputDir.X > 0)
+                    Sprite.Play("Idle RU");
+            }
+            if (InputVelocity.Y > 0)
+            {
+                if (LastInputDir.X < 0)
+                    Sprite.Play("Idle LD");
+                else if (LastInputDir.X > 0)
+                    Sprite.Play("Idle RD");
+            }
+        }
 	}
 
 	public override void _PhysicsProcess(double delta)
