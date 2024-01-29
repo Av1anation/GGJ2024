@@ -19,7 +19,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Intro Cutscene" type="Node2D"]
 script = ExtResource("1_6xvll")
-ScenePath = "res://Scenes/Tenative First BACKUP2.tscn"
+ScenePath = "res://Scenes/MainMenu/MainMenu.tscn"
 
 [node name="TestDialogueActor" parent="." instance=ExtResource("2_uq62s")]
 position = Vector2(-277978, 82468.8)
