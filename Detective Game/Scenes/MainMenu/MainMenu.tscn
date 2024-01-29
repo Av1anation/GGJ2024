@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cc8x0yx7w7sge"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/Menu.cs" id="1_jk7r8"]
+[ext_resource type="Texture2D" uid="uid://bndopl7mqwol6" path="res://Art/Objects/TITLE_BG.png" id="2_5pbgu"]
 [ext_resource type="Texture2D" uid="uid://47yd8srb6g16" path="res://Art/Menu/LOGO.png" id="2_0314j"]
-[ext_resource type="Texture2D" uid="uid://bmxbm3i063d3x" path="res://Art/Menu/TITLE_BG_TEMP (1).png" id="2_hfnwr"]
 [ext_resource type="Texture2D" uid="uid://ulbkqlv331di" path="res://Art/Menu/PLAY.png" id="3_22u0c"]
 [ext_resource type="Texture2D" uid="uid://b6b70xk5jiqfk" path="res://Art/Menu/QUIT.png" id="4_6yu2o"]
 [ext_resource type="AudioStream" uid="uid://dq1idm4my4qpb" path="res://Audio/Music/catch-it-117676.mp3" id="5_hr8ov"]
@@ -32,7 +32,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/CenterContainer"]
 layout_mode = 2
-texture = ExtResource("2_hfnwr")
+texture = ExtResource("2_5pbgu")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -88,8 +88,8 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 50
 
 [node name="Credits" type="TextureButton" parent="HSplitContainer/MarginContainer"]
 layout_mode = 2
