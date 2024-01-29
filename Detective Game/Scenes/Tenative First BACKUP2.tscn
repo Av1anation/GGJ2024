@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=86 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -58,6 +58,8 @@
 [ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="43_2q5s7"]
 [ext_resource type="Resource" uid="uid://dhjcquro1alts" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
 [ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
+[ext_resource type="PackedScene" uid="uid://d13qiqsl1dtq2" path="res://Scenes/Blackboard/ResetVariables.tscn" id="59_pf86v"]
+[ext_resource type="Script" path="res://Scenes/Blackboard/VariableResetter.cs" id="60_d4ea6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -1835,6 +1837,10 @@ Blackboard = Array[Object]([SubResource("Resource_4v60x"), SubResource("Resource
 position = Vector2(4077, 384)
 GM = NodePath("../Hud/InventoryGrid")
 Blackboard = Array[Object]([SubResource("Resource_85j1b"), SubResource("Resource_xb5pt")])
+
+[node name="ResetVariables" parent="." instance=ExtResource("59_pf86v")]
+script = ExtResource("60_d4ea6")
+Variables = Array[Object]([ExtResource("46_3gdo8"), ExtResource("44_tsf0o"), ExtResource("43_2q5s7"), ExtResource("41_7bmk5")])
 
 [connection signal="OnGameFinished" from="Area2D" to="." method="LoadScene"]
 [connection signal="OnGameUnfinished" from="Area2D" to="Nonono Dialogue" method="Interact"]
