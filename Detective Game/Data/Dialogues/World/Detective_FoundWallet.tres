@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=7 format=3 uid="uid://bngdrho36whdc"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_6rwry"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_ejp0g"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="1_taths"]
+
+[sub_resource type="Resource" id="Resource_matar"]
+script = ExtResource("1_taths")
+Text = "ID's sticking out."
+SpeakingCharacter = ExtResource("1_ejp0g")
+
+[sub_resource type="Resource" id="Resource_7rvj0"]
+script = ExtResource("1_taths")
+Text = "Huh, that's an unusual hometown."
+SpeakingCharacter = ExtResource("1_ejp0g")
+
+[sub_resource type="Resource" id="Resource_hobgc"]
+script = ExtResource("1_taths")
+Text = "I should return this."
+SpeakingCharacter = ExtResource("1_ejp0g")
+
+[resource]
+script = ExtResource("1_6rwry")
+Priority = 0
+IsRepeatable = true
+LinesInDialogue = Array[Object]([SubResource("Resource_matar"), SubResource("Resource_7rvj0"), SubResource("Resource_hobgc")])
+RememberOnCompletion = Array[Object]([])

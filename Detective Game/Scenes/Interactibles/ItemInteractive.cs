@@ -9,6 +9,9 @@ public partial class ItemInteractive : BasicInteractive
 	[Export]
 	public ItemData Item;
 
+    [Export]
+    VariableChange[] Blackboard;
+
     public override void _Ready()
     {
         base._Ready();
@@ -18,6 +21,12 @@ public partial class ItemInteractive : BasicInteractive
     {
         base.Interact(reference);
 		GM.MakeSlot(Item);
+        
+        /*foreach (var item in Blackboard)
+        {
+            item.ChangeVar();
+        }*/
+
 		QueueFree();
     }
 }
