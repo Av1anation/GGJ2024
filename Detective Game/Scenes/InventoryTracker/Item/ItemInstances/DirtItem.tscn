@@ -6,6 +6,7 @@
 
 [node name="ItemInteractible" instance=ExtResource("1_stvoi")]
 Item = ExtResource("2_fbnm8")
+Blackboard = Array[Object]([null])
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_lw0qf")
