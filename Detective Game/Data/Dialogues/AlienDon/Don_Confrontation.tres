@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=18 format=3 uid="uid://1f2ru7i74in0"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=19 format=3 uid="uid://1f2ru7i74in0"]
 
 [ext_resource type="Resource" uid="uid://cqo3xnpbaqlob" path="res://Data/Characters/Unknown.tres" id="1_3ydcs"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_yee00"]
@@ -30,6 +30,11 @@ SpeakingCharacter = ExtResource("4_5j281")
 [sub_resource type="Resource" id="Resource_qkttu"]
 script = ExtResource("2_fjq4u")
 Text = "The Alien Mafia? Tractor beam testing facility? Wait..."
+SpeakingCharacter = ExtResource("3_wwubh")
+
+[sub_resource type="Resource" id="Resource_dax0v"]
+script = ExtResource("2_fjq4u")
+Text = "The chalk outline then, that was you?"
 SpeakingCharacter = ExtResource("3_wwubh")
 
 [sub_resource type="Resource" id="Resource_tquou"]
@@ -66,5 +71,5 @@ SpeakingCharacter = ExtResource("4_5j281")
 script = ExtResource("1_yee00")
 Priority = 0
 IsRepeatable = true
-LinesInDialogue = Array[Object]([SubResource("Resource_iamke"), SubResource("Resource_urn0e"), SubResource("Resource_a71gj"), SubResource("Resource_syd4c"), SubResource("Resource_qkttu"), SubResource("Resource_tquou"), SubResource("Resource_knkp7"), SubResource("Resource_mx6lv"), SubResource("Resource_s4j67"), SubResource("Resource_ab8st"), SubResource("Resource_cqsfh")])
+LinesInDialogue = Array[Object]([SubResource("Resource_iamke"), SubResource("Resource_urn0e"), SubResource("Resource_a71gj"), SubResource("Resource_syd4c"), SubResource("Resource_qkttu"), SubResource("Resource_dax0v"), SubResource("Resource_tquou"), SubResource("Resource_knkp7"), SubResource("Resource_mx6lv"), SubResource("Resource_s4j67"), SubResource("Resource_ab8st"), SubResource("Resource_cqsfh")])
 RememberOnCompletion = null
