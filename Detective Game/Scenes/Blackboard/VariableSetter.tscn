@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dggup4np56mj2"]
+[gd_scene load_steps=4 format=3 uid="uid://dggup4np56mj2"]
 
 [ext_resource type="Script" path="res://Scenes/Blackboard/VariableSetter.cs" id="1_e70eu"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/VariableChange.cs" id="2_cw5fs"]
+
+[sub_resource type="Resource" id="Resource_4bcur"]
+script = ExtResource("2_cw5fs")
+Operator = 0
+Value = 0
 
 [node name="VariableSetter" type="Node"]
 script = ExtResource("1_e70eu")
+VariableSet = SubResource("Resource_4bcur")

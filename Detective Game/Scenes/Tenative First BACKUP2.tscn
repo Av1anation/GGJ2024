@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=75 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -40,9 +40,14 @@
 [ext_resource type="Resource" uid="uid://snu5araf5s4r" path="res://Data/Dialogues/World/Detective_CantLeave.tres" id="37_80r7u"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="37_fn74b"]
 [ext_resource type="PackedScene" uid="uid://cyhuxqsyjmxu8" path="res://Scenes/InventoryTracker/Item/ItemInstances/WalletItem.tscn" id="40_evjg1"]
+[ext_resource type="Resource" path="res://Data/Vairables/Victory_Progress.tres" id="41_7bmk5"]
 [ext_resource type="PackedScene" uid="uid://bxlluokff7kae" path="res://Scenes/InventoryTracker/Item/ItemInstances/DirtItem.tscn" id="41_j7uf0"]
 [ext_resource type="PackedScene" uid="uid://7g81rpqelbk" path="res://Scenes/InventoryTracker/Item/ItemInstances/HerringItem.tscn" id="42_jk5hs"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/VariableChange.cs" id="42_t8tts"]
 [ext_resource type="PackedScene" uid="uid://yyi5rh254raa" path="res://Scenes/InventoryTracker/Item/ItemInstances/BalloonItem.tscn" id="43_2fgk8"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Wallet.tres" id="43_2q5s7"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -187,6 +192,48 @@ script = ExtResource("37_fn74b")
 Variable = SubResource("Resource_f0s3b")
 Operator = 0
 Comparator = 4
+
+[sub_resource type="Resource" id="Resource_3lv23"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("41_7bmk5")
+Operator = 1
+Value = 1
+
+[sub_resource type="Resource" id="Resource_0r2qx"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("44_tsf0o")
+Operator = 0
+Value = 1
+
+[sub_resource type="Resource" id="Resource_4asss"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("41_7bmk5")
+Operator = 1
+Value = 1
+
+[sub_resource type="Resource" id="Resource_4v60x"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("46_3gdo8")
+Operator = 0
+Value = 1
+
+[sub_resource type="Resource" id="Resource_pgj2j"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("41_7bmk5")
+Operator = 1
+Value = 1
+
+[sub_resource type="Resource" id="Resource_85j1b"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("43_2q5s7")
+Operator = 0
+Value = 1
+
+[sub_resource type="Resource" id="Resource_xb5pt"]
+script = ExtResource("42_t8tts")
+Variable = ExtResource("41_7bmk5")
+Operator = 1
+Value = 1
 
 [node name="TenativeFirst" type="Node2D"]
 script = ExtResource("1_2yhtq")
@@ -1740,22 +1787,30 @@ PossibleDialogues = Array[Object]([ExtResource("37_80r7u")])
 [node name="ItemInteractible2" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("41_j7uf0")]
 position = Vector2(-366, 1354)
 GM = NodePath("../Hud/InventoryGrid")
+Blackboard = Array[Object]([SubResource("Resource_3lv23")])
 
 [node name="ItemInteractible3" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("42_jk5hs")]
 z_index = 2
 position = Vector2(1807, 210)
 GM = NodePath("../Hud/InventoryGrid")
+Blackboard = Array[Object]([SubResource("Resource_0r2qx"), SubResource("Resource_4asss")])
 
 [node name="ItemInteractible4" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("43_2fgk8")]
 position = Vector2(2069, 1237)
 GM = NodePath("../Hud/InventoryGrid")
+Blackboard = Array[Object]([SubResource("Resource_4v60x"), SubResource("Resource_pgj2j")])
 
 [node name="ItemInteractible" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("40_evjg1")]
 position = Vector2(4077, 384)
 GM = NodePath("../Hud/InventoryGrid")
+Blackboard = Array[Object]([SubResource("Resource_85j1b"), SubResource("Resource_xb5pt")])
 
 [connection signal="OnGameFinished" from="Area2D" to="." method="LoadScene"]
 [connection signal="OnGameUnfinished" from="Area2D" to="Nonono Dialogue" method="Interact"]
 
 [editable path="Layer 1/Baby Floats"]
 [editable path="Hud"]
+[editable path="ItemInteractible2"]
+[editable path="ItemInteractible3"]
+[editable path="ItemInteractible4"]
+[editable path="ItemInteractible"]
