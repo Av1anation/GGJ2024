@@ -21,12 +21,7 @@ public partial class ItemInteractive : BasicInteractive
     {
         base.Interact(reference);
 		GM.MakeSlot(Item);
-        
-        /*foreach (var item in Blackboard)
-        {
-            item.ChangeVar();
-        }*/
 
-		QueueFree();
+        QueueFree();
     }
 }

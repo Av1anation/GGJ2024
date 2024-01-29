@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cedpkn4rqrk44"]
+[gd_scene load_steps=5 format=3 uid="uid://cedpkn4rqrk44"]
 
 [ext_resource type="Script" path="res://Scenes/Interactibles/ItemInteractive.cs" id="1_rsdq0"]
 [ext_resource type="Texture2D" uid="uid://jq2iuwy2mayl" path="res://icon.svg" id="2_22pr2"]
+[ext_resource type="PackedScene" uid="uid://dggup4np56mj2" path="res://Scenes/Blackboard/VariableSetter.tscn" id="3_chmk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2cn"]
 size = Vector2(125, 125)
@@ -15,3 +16,5 @@ texture = ExtResource("2_22pr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uv2cn")
+
+[node name="VariableSetter" parent="." instance=ExtResource("3_chmk1")]

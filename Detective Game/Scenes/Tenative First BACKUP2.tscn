@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=64 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -40,6 +40,7 @@
 [ext_resource type="Resource" uid="uid://snu5araf5s4r" path="res://Data/Dialogues/World/Detective_CantLeave.tres" id="37_80r7u"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="37_fn74b"]
 [ext_resource type="PackedScene" uid="uid://cyhuxqsyjmxu8" path="res://Scenes/InventoryTracker/Item/ItemInstances/WalletItem.tscn" id="40_evjg1"]
+[ext_resource type="Script" path="res://Scenes/Blackboard/VariableSetter.cs" id="41_3bdjw"]
 [ext_resource type="PackedScene" uid="uid://bxlluokff7kae" path="res://Scenes/InventoryTracker/Item/ItemInstances/DirtItem.tscn" id="41_j7uf0"]
 [ext_resource type="PackedScene" uid="uid://7g81rpqelbk" path="res://Scenes/InventoryTracker/Item/ItemInstances/HerringItem.tscn" id="42_jk5hs"]
 [ext_resource type="PackedScene" uid="uid://yyi5rh254raa" path="res://Scenes/InventoryTracker/Item/ItemInstances/BalloonItem.tscn" id="43_2fgk8"]
@@ -1737,9 +1738,10 @@ polygon = PackedVector2Array(5825, 2682, 4883, 3259, 4696, 3166, 5615, 2612)
 position = Vector2(9608, 5312)
 PossibleDialogues = Array[Object]([ExtResource("37_80r7u")])
 
-[node name="ItemInteractible" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("40_evjg1")]
+[node name="ItemInteractible" parent="." instance=ExtResource("40_evjg1")]
 position = Vector2(4085, 344)
-GM = NodePath("../Hud/InventoryGrid")
+script = ExtResource("41_3bdjw")
+VariableSet = null
 
 [node name="ItemInteractible2" parent="." node_paths=PackedStringArray("GM") instance=ExtResource("41_j7uf0")]
 position = Vector2(-366, 1354)
@@ -1759,3 +1761,4 @@ GM = NodePath("../Hud/InventoryGrid")
 
 [editable path="Layer 1/Baby Floats"]
 [editable path="Hud"]
+[editable path="ItemInteractible"]
