@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Dialogue" load_steps=5 format=3 uid="uid://wxoou6bkcm07"]
 
-[ext_resource type="Resource" uid="uid://b8orhshd5f3ua" path="res://Data/Characters/Henchman.tres" id="1_2486s"]
+[ext_resource type="Resource" path="res://Data/Characters/Henchman.tres" id="1_2486s"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_y6j7x"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_mh4sg"]
 

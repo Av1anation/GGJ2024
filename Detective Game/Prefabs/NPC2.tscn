@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/DialogueInteractive.cs" id="1_hf6si"]
 [ext_resource type="Texture2D" uid="uid://cyjjkalyghdm7" path="res://Art/NPC/npc1.png" id="2_jbvg5"]
-[ext_resource type="Texture2D" uid="uid://bnxjj5h40s2s0" path="res://Art/NPC/npc2.png" id="3_jkvoy"]
+[ext_resource type="Texture2D" uid="uid://c8q42vvr70g5k" path="res://Art/NPC/SECURITY_GUARD.png" id="3_hbvrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh44h"]
 size = Vector2(215.625, 310.938)
@@ -25,7 +25,10 @@ texture = ExtResource("2_jbvg5")
 offset = Vector2(0, 90)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_jkvoy")
+texture = ExtResource("3_hbvrq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("3_hbvrq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5625, -3.90625)

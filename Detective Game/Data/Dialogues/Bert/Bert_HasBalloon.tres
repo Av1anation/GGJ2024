@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=15 format=3 uid="uid://daymeg7bcabh4"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=15 format=3 uid="uid://cedyrv5nhe8vc"]
 
-[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="1_40fjw"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Balloon.tres" id="1_40fjw"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_k3xr2"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_1xmoq"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_bbwye"]
-[ext_resource type="Resource" uid="uid://bt7yln5u1vwmb" path="res://Data/Characters/Baby.tres" id="4_2pj61"]
+[ext_resource type="Resource" path="res://Data/Characters/Baby.tres" id="4_2pj61"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="5_xnijs"]
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="6_4ei4r"]
 

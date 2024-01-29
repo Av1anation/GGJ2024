@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_b50r6"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_sa7x3"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_g8wg0"]
-[ext_resource type="Resource" uid="uid://b8orhshd5f3ua" path="res://Data/Characters/Henchman.tres" id="3_vbk46"]
+[ext_resource type="Resource" path="res://Data/Characters/Henchman.tres" id="3_vbk46"]
 
 [sub_resource type="Resource" id="Resource_38wnx"]
 script = ExtResource("2_g8wg0")
