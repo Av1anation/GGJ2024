@@ -58,6 +58,7 @@ skew = 0.445059
 texture = ExtResource("5_1sc2t")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("6_vh6ck")
 autoplay = true
 max_distance = 900.0
