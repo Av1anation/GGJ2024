@@ -12,6 +12,7 @@ SpeakingCharacter = ExtResource("1_ejp0g")
 [sub_resource type="Resource" id="Resource_7rvj0"]
 script = ExtResource("1_taths")
 Text = "Huh, that's an unusual hometown."
+SpeakingCharacter = ExtResource("1_ejp0g")
 
 [sub_resource type="Resource" id="Resource_hobgc"]
 script = ExtResource("1_taths")
