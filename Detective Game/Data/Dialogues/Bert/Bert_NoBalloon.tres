@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Dialogue" load_steps=14 format=3 uid="uid://dhablkpb6220o"]
 
-[ext_resource type="Resource" path="res://Data/Vairables/Has_Balloon.tres" id="1_ogfhj"]
+[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="1_ogfhj"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_snir1"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_erejb"]
-[ext_resource type="Resource" path="res://Data/Vairables/Has_RedHerring.tres" id="3_mdhnd"]
+[ext_resource type="Resource" uid="uid://dhjcquro1alts" path="res://Data/Vairables/Has_RedHerring.tres" id="3_mdhnd"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="4_8sxms"]
-[ext_resource type="Resource" path="res://Data/Characters/Baby.tres" id="5_6v6cv"]
+[ext_resource type="Resource" uid="uid://bt7yln5u1vwmb" path="res://Data/Characters/Baby.tres" id="5_6v6cv"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="6_3dly5"]
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="7_xuh1b"]
 

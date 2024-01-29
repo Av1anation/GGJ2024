@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://bn0l65mspxcp"]
+[gd_scene load_steps=84 format=3 uid="uid://bn0l65mspxcp"]
 
 [ext_resource type="Script" path="res://Scenes/load_scene.cs" id="1_2yhtq"]
 [ext_resource type="Texture2D" uid="uid://cluo06qv8h5u5" path="res://Art/Tilemaps/Main/grass.png" id="1_uyh2m"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://74i2d787n8lo" path="res://Art/Objects/crop_circle_evidence.png" id="18_kr3wu"]
 [ext_resource type="PackedScene" uid="uid://742ut0t1rded" path="res://Prefabs/StreetLight.tscn" id="19_tor8h"]
 [ext_resource type="Texture2D" uid="uid://dgrl7w0ewu1v3" path="res://Art/Objects/Street Light Placeholder.png" id="20_a8whw"]
-[ext_resource type="PackedScene" uid="uid://bjls84wuemjen" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
+[ext_resource type="PackedScene" path="res://Prefabs/NPC1.tscn" id="20_hh4lj"]
 [ext_resource type="Resource" uid="uid://bdw5vp1k81id0" path="res://Data/Dialogues/Wally/Wally_Hi.tres" id="20_ht2wi"]
 [ext_resource type="PackedScene" uid="uid://dvjghexj5jrph" path="res://Prefabs/NPC Crowd.tscn" id="20_vigud"]
 [ext_resource type="Resource" uid="uid://mo0uxbkkb2wx" path="res://Data/Dialogues/Wally/Wally_HasWallet.tres" id="21_emtxp"]
@@ -31,10 +31,10 @@
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
 [ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="Resource" uid="uid://d2y3xe00uiwwp" path="res://Data/Dialogues/Wally/Wally_NoWallet.tres" id="22_0c0td"]
-[ext_resource type="Resource" uid="uid://cedyrv5nhe8vc" path="res://Data/Dialogues/Bert/Bert_HasBalloon.tres" id="22_87scc"]
+[ext_resource type="Resource" uid="uid://daymeg7bcabh4" path="res://Data/Dialogues/Bert/Bert_HasBalloon.tres" id="22_87scc"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
 [ext_resource type="PackedScene" uid="uid://bneudlx7hmgjk" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
-[ext_resource type="PackedScene" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
 [ext_resource type="Resource" uid="uid://dhablkpb6220o" path="res://Data/Dialogues/Bert/Bert_NoBalloon.tres" id="23_rn2aj"]
 [ext_resource type="Resource" uid="uid://wxoou6bkcm07" path="res://Data/Dialogues/Henchmen/Henchman_Rand_1.tres" id="24_w3r4u"]
 [ext_resource type="Resource" uid="uid://dvn4sshpv5c2b" path="res://Data/Dialogues/Bert/Bert_RedHerring.tres" id="24_x0wg2"]
@@ -46,19 +46,18 @@
 [ext_resource type="Texture2D" uid="uid://qlmflpels56f" path="res://Art/Objects/SIGN_2.png" id="31_3t4o2"]
 [ext_resource type="Texture2D" uid="uid://bwh0jixhuvewn" path="res://Art/Objects/SIGN_3.png" id="32_nyun6"]
 [ext_resource type="Texture2D" uid="uid://bbwrcbxvmb0gi" path="res://Art/Objects/SIGN_1.png" id="33_5q6nu"]
-[ext_resource type="Script" path="res://Scripts/Blackboard/BlackboardVar.cs" id="37_0t8f5"]
 [ext_resource type="Resource" uid="uid://csjqpsv1akvo8" path="res://Data/Dialogues/World/Detective_CantLeave.tres" id="37_80r7u"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="37_fn74b"]
 [ext_resource type="PackedScene" uid="uid://cyhuxqsyjmxu8" path="res://Scenes/InventoryTracker/Item/ItemInstances/WalletItem.tscn" id="40_evjg1"]
 [ext_resource type="Texture2D" uid="uid://bx3do25qem2s0" path="res://Art/Objects/carosel.png" id="40_w7vep"]
-[ext_resource type="Resource" path="res://Data/Vairables/Victory_Progress.tres" id="41_7bmk5"]
+[ext_resource type="Resource" uid="uid://dsnkojrlsvxp5" path="res://Data/Vairables/Victory_Progress.tres" id="41_7bmk5"]
 [ext_resource type="PackedScene" uid="uid://bxlluokff7kae" path="res://Scenes/InventoryTracker/Item/ItemInstances/DirtItem.tscn" id="41_j7uf0"]
 [ext_resource type="PackedScene" uid="uid://7g81rpqelbk" path="res://Scenes/InventoryTracker/Item/ItemInstances/HerringItem.tscn" id="42_jk5hs"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/VariableChange.cs" id="42_t8tts"]
 [ext_resource type="PackedScene" uid="uid://yyi5rh254raa" path="res://Scenes/InventoryTracker/Item/ItemInstances/BalloonItem.tscn" id="43_2fgk8"]
 [ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="43_2q5s7"]
-[ext_resource type="Resource" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
-[ext_resource type="Resource" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
+[ext_resource type="Resource" uid="uid://dhjcquro1alts" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
+[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -195,12 +194,9 @@ size = Vector2(20, 51.157)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nfj8o"]
 size = Vector2(59.25, 41.5)
 
-[sub_resource type="Resource" id="Resource_f0s3b"]
-script = ExtResource("37_0t8f5")
-
 [sub_resource type="Resource" id="Resource_be4ca"]
 script = ExtResource("37_fn74b")
-Variable = SubResource("Resource_f0s3b")
+Variable = ExtResource("41_7bmk5")
 Operator = 0
 Comparator = 4
 
