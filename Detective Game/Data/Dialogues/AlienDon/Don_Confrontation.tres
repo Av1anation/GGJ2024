@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Dialogue" load_steps=18 format=3 uid="uid://1f2ru7i74in0"]
 
-[ext_resource type="Resource" path="res://Data/Characters/Unknown.tres" id="1_3ydcs"]
+[ext_resource type="Resource" uid="uid://cqo3xnpbaqlob" path="res://Data/Characters/Unknown.tres" id="1_3ydcs"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_yee00"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_fjq4u"]
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="3_wwubh"]
-[ext_resource type="Resource" path="res://Data/Characters/AlienDon.tres" id="4_5j281"]
-[ext_resource type="Resource" path="res://Data/Characters/AlienDetective.tres" id="5_gaoht"]
+[ext_resource type="Resource" uid="uid://bffmg81y4ueqh" path="res://Data/Characters/AlienDon.tres" id="4_5j281"]
+[ext_resource type="Resource" uid="uid://injh0ayoahec" path="res://Data/Characters/AlienDetective.tres" id="5_gaoht"]
 
 [sub_resource type="Resource" id="Resource_iamke"]
 script = ExtResource("2_fjq4u")

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=8 format=3 uid="uid://bdw5vp1k81id0"]
+
+[ext_resource type="Resource" uid="uid://b4t5wkywv6edi" path="res://Data/Characters/Wally.tres" id="1_wpac6"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_04xd1"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="3_dd4o4"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="4_bq57h"]
+
+[sub_resource type="Resource" id="Resource_uelfm"]
+script = ExtResource("2_04xd1")
+Text = "Excuse me, I lost my wallet. Can you help me?"
+SpeakingCharacter = ExtResource("1_wpac6")
+
+[sub_resource type="Resource" id="Resource_65cjv"]
+script = ExtResource("2_04xd1")
+Text = "I'm on very important business, but I'll keep an eye out."
+SpeakingCharacter = ExtResource("3_dd4o4")
+
+[sub_resource type="Resource" id="Resource_xbisk"]
+script = ExtResource("2_04xd1")
+Text = "Thank you!"
+SpeakingCharacter = ExtResource("3_dd4o4")
+
+[resource]
+script = ExtResource("4_bq57h")
+Priority = 1
+IsRepeatable = false
+LinesInDialogue = Array[Object]([SubResource("Resource_uelfm"), SubResource("Resource_65cjv"), SubResource("Resource_xbisk")])
+RememberOnCompletion = null

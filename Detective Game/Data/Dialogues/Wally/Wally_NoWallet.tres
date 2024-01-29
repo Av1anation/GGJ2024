@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=12 format=3 uid="uid://d2y3xe00uiwwp"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_aripl"]
+[ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="1_nma82"]
+[ext_resource type="Resource" uid="uid://b4t5wkywv6edi" path="res://Data/Characters/Wally.tres" id="1_nydpx"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_8dns2"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_d881h"]
+[ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_f3dd6"]
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="3_mjuqs"]
+
+[sub_resource type="Resource" id="Resource_iv1t8"]
+script = ExtResource("2_d881h")
+Variable = ExtResource("1_nma82")
+Operator = 0
+Comparator = 0
+
+[sub_resource type="Resource" id="Resource_wkc2j"]
+script = ExtResource("3_f3dd6")
+Conditions = Array[Object]([SubResource("Resource_iv1t8")])
+
+[sub_resource type="Resource" id="Resource_yfts4"]
+script = ExtResource("2_8dns2")
+Text = "Found my wallet yet?"
+SpeakingCharacter = ExtResource("1_nydpx")
+
+[sub_resource type="Resource" id="Resource_w8v8q"]
+script = ExtResource("2_8dns2")
+Text = "Nope."
+SpeakingCharacter = ExtResource("3_mjuqs")
+
+[resource]
+script = ExtResource("1_aripl")
+Priority = 0
+IsRepeatable = true
+DialogueConditions = SubResource("Resource_wkc2j")
+LinesInDialogue = Array[Object]([SubResource("Resource_yfts4"), SubResource("Resource_w8v8q")])
+RememberOnCompletion = null
