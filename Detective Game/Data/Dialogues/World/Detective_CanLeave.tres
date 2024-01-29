@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=5 format=3 uid="uid://bkpog70c4rnjh"]
+
+[ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="1_jdsrr"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_p05dj"]
+[ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_jqeos"]
+
+[sub_resource type="Resource" id="Resource_4s4t1"]
+script = ExtResource("2_jqeos")
+Text = "That looks like enough evidence. I should leave."
+SpeakingCharacter = ExtResource("1_jdsrr")
+
+[resource]
+script = ExtResource("1_p05dj")
+Priority = 0
+IsRepeatable = true
+LinesInDialogue = Array[Object]([SubResource("Resource_4s4t1")])
+RememberOnCompletion = null
