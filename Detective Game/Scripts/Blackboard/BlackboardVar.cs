@@ -15,6 +15,7 @@ public partial class BlackboardVar : Resource
                 return;
 
             _value = value;
+            GD.Print($"Variable changed to {value}");
             OnValueChanged?.Invoke();
         }
     }

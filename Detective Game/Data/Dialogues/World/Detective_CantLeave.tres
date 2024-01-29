@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=10 format=3 uid="uid://csjqpsv1akvo8"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=10 format=3 uid="uid://snu5araf5s4r"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_8opwf"]
 [ext_resource type="Resource" path="res://Data/Vairables/Victory_Progress.tres" id="1_prq1g"]
