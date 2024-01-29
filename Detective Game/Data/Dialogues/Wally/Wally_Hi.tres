@@ -18,7 +18,7 @@ SpeakingCharacter = ExtResource("3_dd4o4")
 [sub_resource type="Resource" id="Resource_xbisk"]
 script = ExtResource("2_04xd1")
 Text = "Thank you!"
-SpeakingCharacter = ExtResource("3_dd4o4")
+SpeakingCharacter = ExtResource("1_wpac6")
 
 [resource]
 script = ExtResource("4_bq57h")
