@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Dialogue" load_steps=12 format=3 uid="uid://d2y3xe00uiwwp"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_aripl"]
-[ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="1_nma82"]
-[ext_resource type="Resource" uid="uid://b4t5wkywv6edi" path="res://Data/Characters/Wally.tres" id="1_nydpx"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Wallet.tres" id="1_nma82"]
+[ext_resource type="Resource" path="res://Data/Characters/Wally.tres" id="1_nydpx"]
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Line.cs" id="2_8dns2"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_d881h"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_f3dd6"]

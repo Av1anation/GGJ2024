@@ -31,10 +31,11 @@
 [ext_resource type="Texture2D" uid="uid://bgdvk7dk6644j" path="res://Art/Objects/Fountain.png" id="21_q6q7a"]
 [ext_resource type="PackedScene" uid="uid://bsv1gbyh7ugqy" path="res://Prefabs/NPC2.tscn" id="21_tr7mm"]
 [ext_resource type="Resource" uid="uid://d2y3xe00uiwwp" path="res://Data/Dialogues/Wally/Wally_NoWallet.tres" id="22_0c0td"]
-[ext_resource type="Resource" uid="uid://daymeg7bcabh4" path="res://Data/Dialogues/Bert/Bert_HasBalloon.tres" id="22_87scc"]
+[ext_resource type="Resource" path="res://Data/Dialogues/Bert/Bert_HasBalloon.tres" id="22_87scc"]
 [ext_resource type="PackedScene" uid="uid://ctml22mggu1c2" path="res://Scenes/HUD/HUD.tscn" id="22_bimjp"]
 [ext_resource type="PackedScene" uid="uid://bneudlx7hmgjk" path="res://Prefabs/BabyFloats.tscn" id="22_noedq"]
 [ext_resource type="PackedScene" uid="uid://dksjplg8x5jdc" path="res://Scenes/Interactibles/InteractionManager.tscn" id="23_7niay"]
+[ext_resource type="Texture2D" uid="uid://bulfrhcuyushc" path="res://Art/NPC/wallet_npc.png" id="23_ki7xy"]
 [ext_resource type="Resource" uid="uid://dhablkpb6220o" path="res://Data/Dialogues/Bert/Bert_NoBalloon.tres" id="23_rn2aj"]
 [ext_resource type="Resource" uid="uid://wxoou6bkcm07" path="res://Data/Dialogues/Henchmen/Henchman_Rand_1.tres" id="24_w3r4u"]
 [ext_resource type="Resource" uid="uid://dvn4sshpv5c2b" path="res://Data/Dialogues/Bert/Bert_RedHerring.tres" id="24_x0wg2"]
@@ -50,16 +51,15 @@
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="37_fn74b"]
 [ext_resource type="PackedScene" uid="uid://cyhuxqsyjmxu8" path="res://Scenes/InventoryTracker/Item/ItemInstances/WalletItem.tscn" id="40_evjg1"]
 [ext_resource type="Texture2D" uid="uid://bx3do25qem2s0" path="res://Art/Objects/carosel.png" id="40_w7vep"]
-[ext_resource type="Resource" uid="uid://dsnkojrlsvxp5" path="res://Data/Vairables/Victory_Progress.tres" id="41_7bmk5"]
+[ext_resource type="Resource" path="res://Data/Vairables/Victory_Progress.tres" id="41_7bmk5"]
 [ext_resource type="PackedScene" uid="uid://bxlluokff7kae" path="res://Scenes/InventoryTracker/Item/ItemInstances/DirtItem.tscn" id="41_j7uf0"]
 [ext_resource type="PackedScene" uid="uid://7g81rpqelbk" path="res://Scenes/InventoryTracker/Item/ItemInstances/HerringItem.tscn" id="42_jk5hs"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/VariableChange.cs" id="42_t8tts"]
 [ext_resource type="PackedScene" uid="uid://yyi5rh254raa" path="res://Scenes/InventoryTracker/Item/ItemInstances/BalloonItem.tscn" id="43_2fgk8"]
-[ext_resource type="Resource" uid="uid://xby4n0mg3nx6" path="res://Data/Vairables/Has_Wallet.tres" id="43_2q5s7"]
-[ext_resource type="Resource" uid="uid://dhjcquro1alts" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
-[ext_resource type="Resource" uid="uid://ctcmhofdx7env" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
-[ext_resource type="PackedScene" uid="uid://d13qiqsl1dtq2" path="res://Scenes/Blackboard/ResetVariables.tscn" id="59_pf86v"]
-[ext_resource type="Script" path="res://Scenes/Blackboard/VariableResetter.cs" id="60_d4ea6"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Wallet.tres" id="43_2q5s7"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_RedHerring.tres" id="44_tsf0o"]
+[ext_resource type="Resource" path="res://Data/Vairables/Has_Balloon.tres" id="46_3gdo8"]
+[ext_resource type="PackedScene" path="res://Scenes/Blackboard/ResetVariables.tscn" id="59_pf86v"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0w14"]
 
@@ -311,6 +311,9 @@ PossibleDialogues = Array[Object]([ExtResource("17_oygn3"), ExtResource("18_ew4b
 [node name="NPC2" parent="Layer 1" instance=ExtResource("20_hh4lj")]
 position = Vector2(2985, 2096)
 PossibleDialogues = Array[Object]([ExtResource("20_ht2wi"), ExtResource("21_emtxp"), ExtResource("22_0c0td")])
+
+[node name="Sprite2D" parent="Layer 1/NPC2" index="1"]
+texture = ExtResource("23_ki7xy")
 
 [node name="NPC" parent="Layer 1" instance=ExtResource("21_tr7mm")]
 position = Vector2(1694, 1701)
@@ -1839,12 +1842,12 @@ GM = NodePath("../Hud/InventoryGrid")
 Blackboard = Array[Object]([SubResource("Resource_85j1b"), SubResource("Resource_xb5pt")])
 
 [node name="ResetVariables" parent="." instance=ExtResource("59_pf86v")]
-script = ExtResource("60_d4ea6")
 Variables = Array[Object]([ExtResource("46_3gdo8"), ExtResource("44_tsf0o"), ExtResource("43_2q5s7"), ExtResource("41_7bmk5")])
 
 [connection signal="OnGameFinished" from="Area2D" to="." method="LoadScene"]
 [connection signal="OnGameUnfinished" from="Area2D" to="Nonono Dialogue" method="Interact"]
 
+[editable path="Layer 1/NPC2"]
 [editable path="Layer 1/Baby Floats"]
 [editable path="Hud"]
 [editable path="ItemInteractible2"]
