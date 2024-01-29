@@ -69,6 +69,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_55k4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_arah8")
+}],
+"loop": true,
+"name": &"Walk LU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_nu0rd")
 }, {
 "duration": 1.0,
@@ -76,17 +87,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk RD",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_55k4m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_arah8")
-}],
-"loop": true,
-"name": &"Walk UL",
 "speed": 5.0
 }, {
 "frames": [{
@@ -128,7 +128,7 @@ offset = Vector2(0, 77.675)
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.507334)
 sprite_frames = SubResource("SpriteFrames_473pj")
-animation = &"Walk RD"
+animation = &"Walk LU"
 
 [node name="Steps" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_truer")
