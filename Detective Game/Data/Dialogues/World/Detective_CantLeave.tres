@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=10 format=3 uid="uid://snu5araf5s4r"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=10 format=3 uid="uid://csjqpsv1akvo8"]
 
 [ext_resource type="Script" path="res://Scripts/DialogueSystem/Dialogue.cs" id="1_8opwf"]
-[ext_resource type="Resource" path="res://Data/Vairables/Victory_Progress.tres" id="1_prq1g"]
+[ext_resource type="Resource" uid="uid://dsnkojrlsvxp5" path="res://Data/Vairables/Victory_Progress.tres" id="1_prq1g"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/Conditional.cs" id="2_ds8hb"]
 [ext_resource type="Script" path="res://Scripts/Blackboard/ConditionalSet.cs" id="3_7rp2f"]
 [ext_resource type="Resource" uid="uid://bpg6cwueyayq5" path="res://Data/Characters/Detective.tres" id="4_maoaa"]
@@ -11,7 +11,7 @@
 script = ExtResource("2_ds8hb")
 Variable = ExtResource("1_prq1g")
 Operator = 3
-Comparator = 3
+Comparator = 4
 
 [sub_resource type="Resource" id="Resource_1ckqp"]
 script = ExtResource("3_7rp2f")
